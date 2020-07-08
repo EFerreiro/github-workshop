@@ -1,0 +1,74 @@
+---
+title: "Introduction to GitHub"
+author: | 
+  "Marcin Stepniak"  
+    
+  ![](tGIS_large_black.png){width=3.5in}    
+output:
+  revealjs::revealjs_presentation:
+    center: true
+    transition: slide
+    theme: night
+    incremental: true
+    reveal_options:
+      slideNumber: true
+    
+---
+# Programme of the workshop 
+
+This is an R Markdown presentation. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document.
+
+
+
+# What is Git?
+
+## Git & GitHub
+
++ **Git** is a version control system  
+
+## Why do you (might) need it?
+
+
+
+# How does it work?
+
+
+why?
+https://smutch.github.io/VersionControlTutorial/
+
+
+problem solving:
+https://imgs.xkcd.com/comics/git.png
+
+# How do you make it work?
+
+## Install Git
+
+
+## Comparisons
+
+- Branches
+- changes by commit
+
+
+
+## Slide with Bullets
+
+- Bullet 1
+- Bullet 2
+- Bullet 3
+
+## Slide with R Code and Output
+
+```{r}
+summary(cars)
+```
+
+## Slide with Plot
+
+```{r, echo=FALSE}
+plot(cars)
+```
+
