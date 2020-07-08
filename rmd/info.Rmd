@@ -1,0 +1,138 @@
+---
+title: "Workshop on GitHub"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Intro
+
+In short: the workshop should prepare you to get rid of this situation:  
+
+```{r final_final, echo=FALSE, out.width = '40%'}
+knitr::include_graphics(here::here("img", "img_for_slides", "final_final.png"))
+```
+
+The idea of the workshop is to provide a basic understanding of **Version Control Systems**. Even though it is the most powerful for anyone working with any type of code, it can be useful more generally, e.g. to keep records of changes in documents, facilitate collaboration, experiment with changes (with no/little cost of withdrawing them in case of failure) simultaneously keeping the last "approved" version untouched etc.  
+
+The workshop is an **entry level** so no previous knowledge is required. Being familiar with RStudio may help, but it is not essential, nor it is any knowledge of R. We are **not** going to write any *real* code.  
+
+## Contents
+
+The workshop consists of three parts:  
+
+1. general introduction to **Version Control Systems** and **GitHub**, general logic behind them and basic terms;  
+1. Application of git in **RStudio** IDE;
+1. Application of git in **GitHub desktop**.
+
+## Requirements
+
+Even though you can use git from any operating system, please note that part of workshop will be done with <span style="color:red">**GitHub Desktop**</span> which is available for Windows or MacOS. Moreover, I will use **Windows** during the workshop, so it would be probably the easiest option to follow. 
+
+In order to save time during the workshop, it is necessary to **previously**:  
+
+#### **Create an account on github** (in case you don't have one)  
+
+1. Go to [https://github.com/](https://github.com/)  
+
+    ```{r github sign up 1, echo=FALSE, out.width = '70%'}
+    knitr::include_graphics(here::here("img", "img_for_slides", "github_sign_up.png"))
+    ```
+    
+    You can find the following [advice](https://happygitwithr.com/github-acct.html) useful: Select your username carefully. It will stay with you!
+
+1. Fill the data. Then, verify your account and click on "join a free plan". 
+
+    ```{r github sign up 2, echo=FALSE, out.width = '40%'}
+    knitr::include_graphics(here::here("img", "img_for_slides", "github_sign_up2.png"))
+    ```
+
+    Optional: You can fill the questionairre if you want, but you can skip it as well.  
+
+1. Verify your email
+
+1. Done!
+
+#### **Install R & RStudio**
+
+1. **Install R**: get installer from [here](https://cran.r-project.org/) - available on Windows, MacOS or Linux.
+
+1. **Install RStudio**: Select installer for your operating system from [here](https://rstudio.com/products/rstudio/download/preview/) (**Desktop Version**). In case you have RStudio installed, please check if you need to upgreate to the latest version (there were some recent changes that may influence how RStudio work with github or how it looks like).
+
+Both installations are quite straightforward processes. 
+
+#### **Install Git**
+
+1. Download and install Git: I'm not going to reinvent the wheel. Just follow these great [instructions](https://happygitwithr.com/install-git.html) by *Jenny Bryan*. My recommendations: install [Git for **Windows**](https://gitforwindows.org/) or [**MacOS** or **Linux**](https://git-scm.com/downloads). 
+
+1. Connect Git to RStudio:  
+
+a) Go to **Global Options** of RStudio (Tools -> Global options):  
+
+    ```{r RStudio git 2, echo=FALSE, out.width = '50%'}
+    knitr::include_graphics(here::here("img", "img_for_slides", "RStudio_git2.png"))
+    ```
+
+a) Then go to Git/SVN part
+
+a) Check: *Enable version control interface for RStudio projects*
+
+a) Set the path to the Git executable - It is a path to the `git.exe`, in my case it is the following: `C:/Program Files/Git/bin/git.exe`. 
+
+a) restar RStudio. Git pane should appeared in your RStudio (if you have the default RStudio settings it should be in upper-right corner):  
+
+    ```{r RStudio git, echo=FALSE, out.width = '70%'}
+    knitr::include_graphics(here::here("img", "img_for_slides", "RStudio_git.png"))
+    ```
+    
+a) Now configure Git. (again - following Janny Bryan's [advice](https://happygitwithr.com/hello-git.html)). You can do that directly from RStudio opening the shell: 
+
+    ```{r RStudio git shell, echo=FALSE, out.width = '30%'}
+    knitr::include_graphics(here::here("img", "img_for_slides", "RStudio_Git_shell.png"))
+    ```
+
+Write the following (line-by-line)
+
+```
+git config --global user.name 'Your Name'
+git config --global user.email 'your_email@the.same.as.for.github.account'
+```
+
+**Important:** use the same email as you have used when setting your GitHub account.
+
+*Optional* Now you can try to set up ssh key. It is indispensable, but it makes your life easier. To do so, I suggest [Option 1](https://happygitwithr.com/ssh-keys.html#create-an-ssh-key-pair) followed by [11.5.1](https://happygitwithr.com/ssh-keys.html#provide-public-key-to-github). 
+    
+Finally, your git settings (Tools -> Global Options -> Git/SVN) should look similar to this:
+    
+```{r RStudio git 3, echo=FALSE, out.width = '40%'}
+knitr::include_graphics(here::here("img", "img_for_slides", "RStudio_git3.png"))
+```
+
+
+#### **Install GitHub desktop**
+
+That's why I recommend to use Windows (or MacOs): [GitHub desktop](https://desktop.github.com/). 
+
+Once GitHub desktop is installed you need to login to your GitHub account: 
+
+1. Go to to File -> Options:
+
+    
+    ```{r github options 1, echo=FALSE, out.width = '40%'}
+    knitr::include_graphics(here::here("img", "img_for_slides", "Github_desktop1.png"))
+    ```
+
+1. Sign in to your account:
+
+    ```{r github options 2, echo=FALSE, out.width = '40%'}
+    knitr::include_graphics(here::here("img", "img_for_slides", "Github_desktop2.png"))
+    ```
+    
+    
+In case of doubts, please consult [GitHub docs](https://docs.github.com/en/desktop/getting-started-with-github-desktop).
+
+
+
+
