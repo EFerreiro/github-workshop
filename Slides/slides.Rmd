@@ -326,7 +326,7 @@ Add **useful**, **self-explanatory** messages.
 knitr::include_graphics("https://imgs.xkcd.com/comics/git_commit.png")
 ```
 
-# Git workflow {data-background=#4B0082}
+# Git workflow: clone repo {data-background=#4B0082}
 
 ## Clone new repo
 
@@ -362,7 +362,7 @@ knitr::include_graphics(here::here("img", "clone_repo_04.png"))
 
 ## Clone new repo (RStudio)
 
-4. Paste link to the repo and select where the project should be created
+4. Paste link to the repo and select its location
 
 ```{r, echo=FALSE}
 knitr::include_graphics(here::here("img", "clone_repo_05.png"))
@@ -376,11 +376,12 @@ Done!
 knitr::include_graphics(here::here("img", "clone_repo_06.png"))
 ```
 
+# Git workflow: commits {data-background=#4B0082}
 
 ## File states
 
-1. <span style="color:#9BBB59">Committed</span>: form part of the repo in the current form  
-Git keep their most recent state and full history of changes  
+1. <span style="color:#9BBB59">Committed</span>: form part of the repo in the current form.  
+Git keeps their most recent state and full history of changes  
 
 1. <span style="color:#FD1B1A">Untracked</span>: git *sees* them but has no clue what's your point, yet
 
