@@ -317,6 +317,21 @@ knitr::include_graphics("https://imgs.xkcd.com/comics/git_commit.png")
 
 # Git workflow {data-background=#4B0082}
 
+## Clone new repo
+
+1. You need to download (<span style="color:#FFA07A">clone</span>) repo from github
+
+```{r, echo=FALSE, out.width = '80%'}
+knitr::include_graphics(here::here("img", "clone_repo_01.png"))
+```
+
+## Clone new repo (RStudio)
+
+2. Create new RStudio project and link it to the remote repo
+
+
+
+
 ## File states
 
 1. <span style="color:#9BBB59">Committed</span>: form part of the repo in the current form  
