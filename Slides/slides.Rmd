@@ -1,7 +1,7 @@
 ---
 title: "Introduction to GitHub"
 author: | 
-  "Marcin Stepniak"  
+  Marcin Stepniak  
     
   ![](tGIS_large_black.png){width=3.5in}    
 output:
@@ -9,66 +9,330 @@ output:
     center: true
     transition: slide
     theme: night
-    incremental: true
+    incremental: false
     reveal_options:
       slideNumber: true
     
 ---
 # Programme of the workshop 
 
-This is an R Markdown presentation. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
++ **Version Control Systems**, **Git** and **GitHub**
 
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document.
++ Application of git in **RStudio** IDE;
+
++ Application of git in **GitHub desktop**.
+
+# What is Git?<br>What is GitHub? {data-background=#4B0082}
+
+## Git
+
+**Git** is a <span style="color:#CACCCD">distributed</span> <span style="color:#FFA07A">**version control system**</span>  
+
++ each client (user) has its own local copy  
+<span style="color:#FFA07A"> => **local repository**</span>  
+  
++ which can be synchronized with a copy stored on external server  
+<span style="color:#FFA07A"> => **remote repository**</span>
 
 
+```{r, echo=FALSE, warning=FALSE, message=FALSE, fig.height=4}
+library(networkD3)
+source(here::here("Slides", "R", "remote_graph.R"))
+remote_graph()
+```
 
-# What is Git?
+## GitHub
 
-## Git & GitHub
+<P ALIGN=LEFT>**GitHub** is a commercial <span style="color:#FFA07A">Git repository hosting service</span>  
+with some extra functionalities:</span>  
 
-+ **Git** is a version control system  
++ cloud-based service
++ web-based graphical interface
++ issue tracker 
++ basic project management functionalities, access granting etc.
++ Extended free plan:  
+    
+    + unlimited private repositories
+    + unlimited collaborators 
+
+
+# Why do you (might) need it? {data-background=#4B0082}
+
 
 ## Why do you (might) need it?
 
-
-
-# How does it work?
-
-
-why?
-https://smutch.github.io/VersionControlTutorial/
-
-
-problem solving:
-https://imgs.xkcd.com/comics/git.png
-
-# How do you make it work?
-
-## Install Git
-
-
-## Comparisons
-
-- Branches
-- changes by commit
-
-
-
-## Slide with Bullets
-
-- Bullet 1
-- Bullet 2
-- Bullet 3
-
-## Slide with R Code and Output
-
-```{r}
-summary(cars)
+```{r, echo=FALSE, out.width = '70%'}
+knitr::include_graphics(here::here("rmd", "temp", "for_graph.svg"))
 ```
 
-## Slide with Plot
+## Why do you need it for yourself?
+
+```{r, echo=FALSE, out.width = '120%'}
+knitr::include_graphics(here::here("img", "version_control_comics.jpg"))
+```
+<font size="3">Source: *https://smutch.github.io/VersionControlTutorial/*</font>
+
+## Why do you need it for yourself?
+
++ <span style="color:#FFA07A">track changes:</span> always have the most **recent version** of a file, while keeping the entire **history of changes**  
++ <span style="color:#FFA07A">experiment:</span> you can **experiment** with your code  
+and **revert changes** if needed  
++ <span style="color:#FFA07A">multiple instances:</span> you can have several version of your code  
+and easily switch between them  
++ in case of using a remote repository (e.g. GitHub):  
+  
+  
+  + <span style="color:#FFA07A">backup</span> in a cloud (with all the above)  
+  + <span style="color:#FFA07A">easy</span> access from multiple devices  
+  + use <span style="color:#FFA07A">issues</span> to make notes to the future self
+
+## Why do you need it for sharing?
+
++ searchable repositories  
++ created to share a code  
++ easy to attached a web-based description of your code (`README.md`) file  
+e.g. https://github.com/r-spatial/leafgl
++ easy to install directly from github  
+(e.g. `remotes::install_github("r-lib/remotes")` )
+
+## Why do you need it for collaboration?
+
++ **Git** is distributed: all collaborators work on their own local copy  
+(code, its versions and all the **history** of changes)  
++ All collaborators can work simultaneously
++ Grant access even to private repositories  
++ Share (and test!) a developer version of your code  
++ pull request: revise changes before merging them  
++ contributions are transparent  
++ issues:  
+    + search for help, ask questions and discuss, request new features / modifications  
+    + easy to link to commits, cross-connect to other issues, bug tracker  
+    + assignees, mentions and notifications  
+
+
+# Basic vocabulary {data-background=#4B0082}
+
+## Repo
+
+<span style="color:#FFA07A">Repo</span>sitory is like a main *folder* of your project.  
+It may contain any type of files, (sub)folders etc.  
+
+Golden rule: <span style="color:#FFA07A">**one project one repo**</span>sitory.
+
++ <span style="color:#FFA07A">Local repository</span> is located on the user's computer.  
++ <span style="color:#FFA07A">Remote repository</span> is located on remote server. 
+
+<br> 
+
+<span style="color:#FFA07A">`README`</span> file: not required but highly recommended.  
+Describes the repo, may contain documentation, use-cases or  
+any other information you think may be useful for a potential user (including yourself!)
+
+
+# Create new repo  {data-background=#4B0082}
+
+<style type="text/css">
+.clearer {clear: both}
+.column-left1{
+  float: left;
+  width: 48%;
+  text-align: centre;
+}
+.column-centre1{
+  float: centre;
+  width: 4%;
+  text-align: centre;
+}
+.column-right1{
+  float: right;
+  width: 48%;
+  text-align: centre;
+}
+</style>
+
+## Create remote repository on GitHub
+
+<br>  
+
+Go to your GitHub account and select <span style="color:#FFA07A">**New repository**</span>  
+
+<br>  
+
+```{r github sign up 1, echo=FALSE, out.width = '35%'}
+knitr::include_graphics(here::here("img", "new_repo_01.png"))
+```
+
+## Name your repository
+
++ Should be a character string (without space)
+
++ No *official* naming convention, but hyphens are mostly used to separate words
+</span>
+
+<div class="column-left1">
+```{r, echo=FALSE}
+knitr::include_graphics(here::here("img", "new_repo_02_name.png"))
+```
+</div>
+
+<div class="column-right1">
+```{r, echo=FALSE}
+knitr::include_graphics(here::here("img", "new_repo_03_name.png"))
+```
+</div><div class="clearer"></div> 
+
+
++ <span style="color:#FFA07A; background-color:rgba(255,244,204,.1)">**`Great repository names are short and memorable.`**</span>
+
+<br>  
+
+Besides repository name you can:
+
++ add a brief <span style="color:#FFA07A">description</span>  (read: **you should**)
+
++ create <span style="color:#FFA07A">`README.md`</span> file (yes, you **want** do that)
 
 ```{r, echo=FALSE}
-plot(cars)
+knitr::include_graphics(here::here("img", "new_repo_08_readme.png"))
 ```
+
+## Make decision: public or private?
+
+<br> 
+
++ **public** repository is, well, public (anyone can see it, clone it etc.)
+
+```{r, echo=FALSE, out.width = '50%'}
+knitr::include_graphics(here::here("img", "new_repo_09_public.png"))
+```
+
++ **private** repository is visible only for you or anyone you grant access to it. It is a good solution:      
+
+  + testing, experiments, etc.
+  + for early-stage projects (for some reason you don't want to share it yet)  
+  + for all *in-progress* stuff  
+  + for any project should not be publicly visible  
+  
+## Public to private or private to public?<br>Not a problem! (usually)  
+  
+<br>
+
++ you can change it anytime:
+
+```{r, echo=FALSE, out.width = '50%'}
+knitr::include_graphics(here::here("img", "new_repo_10_settings.png"))
+```
+
+```{r, echo=FALSE, out.width = '50%'}
+knitr::include_graphics(here::here("img", "new_repo_11_danger_zone.png"))
+```
+
+## Add **.gitignore**
+
+<span style="color:#FFA07A">**.gitignore**</span> contains a list of all files that **should not** be included in the repo.
+
+It's highly recommended to inlcude <span style="color:#FFA07A">**.gitignore**</span> into your repository.  
+
+GitHub offers a list of `.gitignore` templates.  
+Select the one which fits you the best.
+
+```{r, echo=FALSE, out.width = '35%'}
+knitr::include_graphics(here::here("img", "new_repo_04_gitignore.png"))
+```
+
+
+## Select a licence
+
+<br>
+
+```{r, echo=FALSE, out.width = '20%'}
+knitr::include_graphics(here::here("img", "new_repo_05_licence.png"))
+```
+
+## New repo on github: summary
+
+```{r, echo=FALSE, out.width = '80%'}
+knitr::include_graphics(here::here("img", "new_repo_06.png"))
+```
+
+## The look of a brand new repository
+
+```{r, echo=FALSE, out.width = '80%'}
+knitr::include_graphics(here::here("img", "new_repo_07.png"))
+```
+
+# Now it is your turn!<br><br>Create your first repository  {data-background=#008080}
+
++ create new, **public** repository on github
++ inlcude `README` and `.gitignore` (`R`)
+
+# Basic vocabulary {data-background=#4B0082}
+
+## Clone repo
+
+<span style="color:#FFA07A">Clone</span> creates a local *copy* of a remote repository
+
+It contains all project's files and full project's history. 
+
+
+
+## Commit
+
+<span style="color:#FFA07A">Commit</span> is a `snapshot` of the repository.
+
+```{r, echo=FALSE, out.width = '80%'}
+knitr::include_graphics(here::here("img", "github_commit_01.png"))
+```
+
+*Commits are cheap*.  
+Commit often. 
+
+## Commits 
+
+<p align = left>Each commit has its own identifier.</p>  
+
+```{r, echo=FALSE, out.width = '80%'}
+knitr::include_graphics(here::here("img", "github_commit_03.png"))
+```
+
+<p align = left>You can:  
++ have an access to the repository at a given stage  
++ revise changes made by particular commit</p>  
+
+## Revision of changes
+
+```{r, echo=FALSE, out.width = '80%'}
+knitr::include_graphics(here::here("img", "github_commit_02.png"))
+```
+
+## Commit messages
+
+Each commit must contain a message.  
+Add **useful**, **self-explanatory** messages.  
+
+
+```{r, echo=FALSE, out.width = '60%'}
+knitr::include_graphics("https://imgs.xkcd.com/comics/git_commit.png")
+```
+
+# Git workflow {data-background=#4B0082}
+
+## File states
+
+1. <span style="color:#9BBB59">Committed</span>: form part of the repo in the current form  
+Git keep their most recent state and full history of changes  
+
+1. <span style="color:#FD1B1A">Untracked</span>: git *sees* them but has no clue what's your point, yet
+
+1. <span style="color:#FCD5B5">Staged</span>: their current form is *frozen* and can be added to  *commit*.  
+In case of further changes, you need unstage and stage it again.  
+
+1. <span style="color:#FFA07A">Ignored</span>: git *doesn't see* nor it's interested whether they are changed or not.  
+You need to explicitly *inform* git to ignore a file
+
+
+```{r, echo=FALSE, out.width = '80%'}
+knitr::include_graphics(here::here("img", "workflow_01.png"))
+```
+
 
