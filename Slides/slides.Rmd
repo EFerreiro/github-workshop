@@ -43,7 +43,7 @@ remote_graph()
 
 ## GitHub
 
-<P ALIGN=LEFT>**GitHub** is a commercial <span style="color:#FFA07A">Git repository hosting service</span>  
+<p align=left>**GitHub** is a commercial <span style="color:#FFA07A">Git repository hosting service</span>  
 with some extra functionalities:</span>  
 
 + cloud-based service
@@ -338,9 +338,43 @@ knitr::include_graphics(here::here("img", "clone_repo_01.png"))
 
 ## Clone new repo (RStudio)
 
-2. Create new RStudio project and link it to the remote repo
+2. Create new RStudio project...
+
+```{r, echo=FALSE}
+knitr::include_graphics(here::here("img", "clone_repo_02.png"))
+```
 
 
+3. ...using Version Control  
+
+<div class="clearer"></div>
+<div class="column-left1">
+```{r, echo=FALSE}
+knitr::include_graphics(here::here("img", "clone_repo_03.png"))
+```
+</div>
+<div class="column-right1">
+```{r, echo=FALSE}
+knitr::include_graphics(here::here("img", "clone_repo_04.png"))
+```
+</div><div class="clearer"></div>
+
+
+## Clone new repo (RStudio)
+
+4. Paste link to the repo and select where the project should be created
+
+```{r, echo=FALSE}
+knitr::include_graphics(here::here("img", "clone_repo_05.png"))
+```
+
+## Clone new repo (RStudio)
+
+Done!
+
+```{r, echo=FALSE}
+knitr::include_graphics(here::here("img", "clone_repo_06.png"))
+```
 
 
 ## File states
