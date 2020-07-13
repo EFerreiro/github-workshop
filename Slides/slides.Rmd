@@ -305,6 +305,17 @@ knitr::include_graphics(here::here("img", "github_commit_03.png"))
 knitr::include_graphics(here::here("img", "github_commit_02.png"))
 ```
 
+## Revision of chages
+
+You can even compare binary files!  
+*Use `Display the rich diff`*
+
+```{r, echo=FALSE, out.width = '80%'}
+knitr::include_graphics(here::here("img", "github_commit_04.png"))
+```
+
+
+
 ## Commit messages
 
 Each commit must contain a message.  
