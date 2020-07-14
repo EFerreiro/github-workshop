@@ -32,7 +32,7 @@ knitr::opts_chunk$set(echo = TRUE)
 In short: the workshop should prepare you to get rid of this situation:  
 
 ```{r final_final, echo=FALSE, out.width = '40%'}
-knitr::include_graphics(here::here("img", "final_final.png"))
+knitr::include_graphics("https://github.com/stmarcin/github-workshop/raw/master/img/final_final.png")
 ```
 
 The idea of the workshop is to provide a basic understanding of **Version Control Systems**. Even though it is the most powerful for anyone working with any type of code, it can be useful more generally, e.g. to keep records of changes in documents, facilitate collaboration, experiment with changes (with no/little cost of withdrawing them in case of failure) simultaneously keeping the last "approved" version untouched etc.  
@@ -58,7 +58,7 @@ In order to save the time during the workshop, it is necessary to **previously**
 1. Go to [https://github.com/](https://github.com/){target="blank"}  
 
     ```{r github sign up 1, echo=FALSE, out.width = '70%'}
-    knitr::include_graphics(here::here("img", "github_sign_up.png"))
+    knitr::include_graphics("https://github.com/stmarcin/github-workshop/raw/master/img/github_sign_up.png")
     ```
     
     You can find the following [advice](https://happygitwithr.com/github-acct.html){target="blank"} useful: Select your username carefully. It will stay with you!
@@ -66,7 +66,7 @@ In order to save the time during the workshop, it is necessary to **previously**
 1. Fill the data. Then, verify your account and click on "join a free plan". 
 
     ```{r github sign up 2, echo=FALSE, out.width = '40%'}
-    knitr::include_graphics(here::here("img", "github_sign_up2.png"))
+    knitr::include_graphics("https://github.com/stmarcin/github-workshop/raw/master/img/github_sign_up2.png")
     ```
 
     Optional: You can fill the questionairre if you want, but you can skip it as well.  
@@ -93,18 +93,18 @@ Below are selected printscreens from **Windows** installation (in case of any ot
 
 1. Select where Git should be installed. Remember the path (or even better - copy it somewhere):
 ```{r, echo=FALSE,  out.width = '50%'}
-knitr::include_graphics(here::here("img", "git_install_02.png"))
+knitr::include_graphics("https://github.com/stmarcin/github-workshop/raw/master/img/git_install_02.png")
 ```
 
 1. Select default components, decide if you want Git in Start Menu folder (hint: you want), and choose default git editor of your choice:
 ```{r, echo=FALSE}
-knitr::include_graphics(here::here("img", "git_install_01.png"))
+knitr::include_graphics("https://github.com/stmarcin/github-workshop/raw/master/img/git_install_01.png")
 ```
 
 1. Use default and/or recommended options
 ```{r, echo=FALSE}
-knitr::include_graphics(here::here("img", "git_install_03.png"))
-knitr::include_graphics(here::here("img", "git_install_04.png"))
+knitr::include_graphics("https://github.com/stmarcin/github-workshop/raw/master/img/git_install_03.png")
+knitr::include_graphics("https://github.com/stmarcin/github-workshop/raw/master/img/git_install_04.png")
 ```
 
 ## **Configure Git**   
@@ -113,7 +113,7 @@ I know, it sounds scary, but you only need to do the following:
 
 1. Open GitBash:
 ```{r RStudio git shell, echo=FALSE, out.width = '30%'}
-knitr::include_graphics(here::here("img", "git_bash.png"))
+knitr::include_graphics("https://github.com/stmarcin/github-workshop/raw/master/img/git_bash.png")
 ```
 
 1. Type the following (line by line)
@@ -134,7 +134,7 @@ It *should* be done automatically, but you may wish to confirm that RStudio *see
 1) Go to **Global Options** of RStudio (Tools -> Global options):  
 
     ```{r RStudio git 2, echo=FALSE, out.width = '50%'}
-    knitr::include_graphics(here::here("img", "RStudio_git2.png"))
+    knitr::include_graphics("https://github.com/stmarcin/github-workshop/raw/master/img/RStudio_git2.png")
     ```
 
 1) Then go to Git/SVN part
@@ -146,7 +146,7 @@ a) Set the path to the Git executable - It is a path to the `git.exe`, in my cas
 a) restart RStudio. Git pane should appeared in your RStudio (if you have the default RStudio settings it should be in upper-right corner):  
 
     ```{r RStudio git, echo=FALSE, out.width = '70%'}
-    knitr::include_graphics(here::here("img", "RStudio_git3.png"))
+    knitr::include_graphics("https://github.com/stmarcin/github-workshop/raw/master/img/RStudio_git3.png")
     ```
     
 <br>  
@@ -166,13 +166,13 @@ Once GitHub desktop is installed you need to login to your GitHub account:
 
     
     ```{r github options 1, echo=FALSE, out.width = '40%'}
-    knitr::include_graphics(here::here("img", "Github_desktop1.png"))
+    knitr::include_graphics("https://github.com/stmarcin/github-workshop/raw/master/img/Github_desktop1.png")
     ```
 
 1. Sign in to your account:
 
     ```{r github options 2, echo=FALSE, out.width = '40%'}
-    knitr::include_graphics(here::here("img", "Github_desktop2.png"))
+    knitr::include_graphics("https://github.com/stmarcin/github-workshop/raw/master/img/Github_desktop2.png")
     ```
     
     
