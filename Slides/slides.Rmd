@@ -70,7 +70,7 @@ knitr::include_graphics(here::here("rmd", "temp", "for_graph.svg"))
 ```{r, echo=FALSE, out.width = '120%'}
 knitr::include_graphics(here::here("img", "version_control_comics.jpg"))
 ```
-<font size="3">Source: *https://smutch.github.io/VersionControlTutorial/*</font>
+<small>Source: *https://smutch.github.io/VersionControlTutorial/*</small>
 
 ## Why do you need it for yourself?
 
@@ -325,6 +325,8 @@ Add **useful**, **self-explanatory** messages.
 ```{r, echo=FALSE, out.width = '60%'}
 knitr::include_graphics("https://imgs.xkcd.com/comics/git_commit.png")
 ```
+
+<small>Source: *https://imgs.xkcd.com/comics/git_commit.png*</small>
 
 # Git workflow: clone repo {data-background=#4B0082}
 

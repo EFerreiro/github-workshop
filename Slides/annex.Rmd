@@ -1,0 +1,19 @@
+---
+title: "Introduction to GitHub"
+
+output:
+  revealjs::revealjs_presentation:
+    center: true
+    transition: slide
+    theme: night
+    incremental: false
+    reveal_options:
+      slideNumber: true
+    
+---
+
+# Annex {data-background=#8B008B}
+
+# notes {data-background=#4B0082}
+
+# exercises {data-background=#008080}
