@@ -178,7 +178,7 @@ Once GitHub desktop is installed you need to login to your GitHub account:
     
 In case of doubts, please consult [GitHub docs](https://docs.github.com/en/desktop/getting-started-with-github-desktop){target="blank"}.
 
-## **Workshop workflow**
+## **Workshop dynamic**
 
 <br> 
 
