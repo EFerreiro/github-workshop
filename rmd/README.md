@@ -24,7 +24,7 @@ July 23rd, 2020
 
 In short: the workshop should prepare you to get rid of this situation:
 
-<img src="D:/MSCA_FINAL/github_workshop/img/img_for_slides/final_final.png" width="40%" />
+<img src="D:/github/github-workshop/img/final_final.png" width="40%" />
 
 The idea of the workshop is to provide a basic understanding of
 **Version Control Systems**. Even though it is the most powerful for
@@ -62,7 +62,7 @@ In order to save the time during the workshop, it is necessary to
 
 1.  Go to <https://github.com/>
     
-    <img src="D:/MSCA_FINAL/github_workshop/img/img_for_slides/github_sign_up.png" width="70%" />
+    <img src="D:/github/github-workshop/img/github_sign_up.png" width="70%" />
     
     You can find the following
     [advice](https://happygitwithr.com/github-acct.html) useful: Select
@@ -71,7 +71,7 @@ In order to save the time during the workshop, it is necessary to
 2.  Fill the data. Then, verify your account and click on “join a free
     plan”.
     
-    <img src="D:/MSCA_FINAL/github_workshop/img/img_for_slides/github_sign_up2.png" width="40%" />
+    <img src="D:/github/github-workshop/img/github_sign_up2.png" width="40%" />
     
     Optional: You can fill the questionairre if you want, but you can
     skip it as well.
@@ -111,22 +111,22 @@ of any other just click “next”):
 
 2.  Select where Git should be installed. Remember the path (or even
     better - copy it somewhere):
-    <img src="D:/MSCA_FINAL/github_workshop/img/img_for_slides/git_install_02.png" width="50%" />
+    <img src="D:/github/github-workshop/img/git_install_02.png" width="50%" />
 
 3.  Select default components, decide if you want Git in Start Menu
     folder (hint: you want), and choose default git editor of your
     choice:
-    <img src="D:/MSCA_FINAL/github_workshop/img/img_for_slides/git_install_01.png" width="1799" />
+    <img src="D:/github/github-workshop/img/git_install_01.png" width="1799" />
 
 4.  Use default and/or recommended options
-    <img src="D:/MSCA_FINAL/github_workshop/img/img_for_slides/git_install_03.png" width="1802" /><img src="D:/MSCA_FINAL/github_workshop/img/img_for_slides/git_install_04.png" width="1794" />
+    <img src="D:/github/github-workshop/img/git_install_03.png" width="1802" /><img src="D:/github/github-workshop/img/git_install_04.png" width="1794" />
 
 ## **Configure Git**
 
 I know, it sounds scary, but you only need to do the following:
 
 1.  Open GitBash:
-    <img src="D:/MSCA_FINAL/github_workshop/img/img_for_slides/git_bash.png" width="30%" />
+    <img src="D:/github/github-workshop/img/git_bash.png" width="30%" />
 
 2.  Type the following (line by line)
 
@@ -147,7 +147,7 @@ RStudio *see* the Git.
 
 1)  Go to **Global Options** of RStudio (Tools -\> Global options):
     
-    <img src="D:/MSCA_FINAL/github_workshop/img/img_for_slides/RStudio_git2.png" width="50%" />
+    <img src="D:/github/github-workshop/img/RStudio_git2.png" width="50%" />
 
 2)  Then go to Git/SVN part
 
@@ -162,7 +162,7 @@ RStudio *see* the Git.
     have the default RStudio settings it should be in upper-right
     corner):
     
-    <img src="D:/MSCA_FINAL/github_workshop/img/img_for_slides/RStudio_git3.png" width="70%" />
+    <img src="D:/github/github-workshop/img/RStudio_git3.png" width="70%" />
 
 <br>
 
@@ -188,16 +188,16 @@ account:
 
 1.  Go to to File -\> Options:
     
-    <img src="D:/MSCA_FINAL/github_workshop/img/img_for_slides/Github_desktop1.png" width="40%" />
+    <img src="D:/github/github-workshop/img/Github_desktop1.png" width="40%" />
 
 2.  Sign in to your account:
     
-    <img src="D:/MSCA_FINAL/github_workshop/img/img_for_slides/Github_desktop2.png" width="40%" />
+    <img src="D:/github/github-workshop/img/Github_desktop2.png" width="40%" />
 
 In case of doubts, please consult [GitHub
 docs](https://docs.github.com/en/desktop/getting-started-with-github-desktop).
 
-## **Workshop workflow**
+## **Workshop dynamic**
 
 <br>
 

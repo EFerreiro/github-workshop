@@ -203,3 +203,9 @@ Some basic information, rules and guidelines:
 
 
 <br> 
+```{r echo=FALSE, eval = FALSE}
+rmarkdown::render(here::here("rmd", "github_workshop_info.Rmd"), 
+                  output_format = "github_document",
+                  output_file = here::here("rmd", "README.md")
+                    )
+```
