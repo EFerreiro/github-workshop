@@ -41,6 +41,15 @@ source(here::here("Slides", "R", "remote_graph.R"))
 remote_graph()
 ```
 
+## Git workflow
+
+```{r, echo=FALSE, out.width = '120%'}
+knitr::include_graphics(here::here("img", "graph_intro.png"))
+```
+<small>Source: *http://bit-booster.com/graph.html*</small>
+
+
+
 ## GitHub
 
 <p align=left>**GitHub** is a commercial <span style="color:#FFA07A">Git repository hosting service</span>  
@@ -61,6 +70,9 @@ with some extra functionalities:</span>
 knitr::include_graphics(here::here("img", "github_main.png"))
 ```
 <small>Source: *https://github.com/stmarcin/github-workshop*</small>
+
+
+
 
 
 # Why do you (might) need it? {data-background=#4B0082}
@@ -784,6 +796,7 @@ knitr::include_graphics(here::here("img", "git_conflict_05.png"))
 </div>
 **Resolved!**
 
+
 # Basic vocabulary: branches {data-background=#4B0082}
 
 ## Branch 
@@ -906,7 +919,7 @@ knitr::include_graphics(here::here("img", "git_branch_10.png"))
 
 Once you are ready to incorporate the changes you can <span style="color:#FFA07A">**merge**</span> them into your master branch.
 
-```{r, echo=FALSE, out.width = '30%'}
+```{r, echo=FALSE, out.width = '50%'}
 knitr::include_graphics(here::here("img", "git_branch_02.png"))
 ```
 
@@ -938,7 +951,7 @@ knitr::include_graphics(here::here("img", "git_branch_12.png"))
 ## Pull request 
 
 <div style="text-align:left"> 
-+ <span style="color:#FFA07A">**Pull request**</span> opens the discussion on proposed changes.  
++ <span style="color:#FFA07A">**Pull request**</span> opens a discussion on proposed changes.  
 
 + By filling a pull request you are asking a repo owner to pull your changes to the repository.  
 Note: you can *ask* yourself (as repo owner) as well!  
@@ -1025,4 +1038,78 @@ git branch -d name-of-your-branch
 
 # Now it is your turn!<br>Merge a branch {data-background=#008080}
 
-+ 
++ Create a pull request  
++ Merge a pull request  
++ Comfirm merge  
++ Delete branch on GitHub.com  
++ Check out to `master`  
++ *Optional: delete your local branch (and remove it from RStudio pop-up menu)*
+
+# Annex I {data-background=#8B008B}
+
+# Basic vocabulary:<br>Fork repository {data-background=#4B0082}
+
+## Fork
+
+<div style="text-align:left"> 
+<span style="color:#FFA07A">**Fork**</span> repository makes a personal `copy` of another user's repository.  
+
+All commits you made are **pushed** to your copy of the original repository without afecting an original one.
+
+You can establish a link to an original repo, keep your fork synchronized and make a pull request to an **upstream** repo.
+
+</div>
+
+```{r, echo=FALSE, out.width = '80%'}
+knitr::include_graphics(here::here("img", "git_fork_01.png"))
+```
+
+## Workflow with forked repository
+
+1. Once you fork repository you need to clone it to the local repo. 
+1. Once it is cloned you have to set a link to the original one.  
+1. Open Shell and write the following:
+
+    <div style="color:#FFA07A; background-color:rgba(255,244,204,.1)">
+    ```
+    git remote add upstream https://github.com/stmarcin/repo-for-workshop-tgis
+    ```
+    </div>  
+
+1. Create a new branch and check-out to it.
+1. Add/edit files, stage them and commit changes.  
+1. Push changes to **your** remote repository.  
+1. Create a **Pull request**
+
+
+# Basic vocabulary: issues {data-background=#4B0082}
+
+## GitHub issues
+
+```{r, echo=FALSE, out.width = '50%'}
+knitr::include_graphics(here::here("img", "github_issues.png"))
+```
+
+GitHub <span style="color:#FFA07A">**issues**</span> serve to communicate with users (including yourself).
+
++ Each **`issue`** has its own id which can be then refered to and contains its own discussion thread.
++ You can refer the issue id (`#`) in your commit messages, e.g. `Solve #3`
++ You can <span style="color:#FFA07A">`@mention`</span> another user so they are informed about the issue.  
+
+# Now it is your turn!<br>Fork a repository {data-background=#008080}
+
++ Fork the repository `https://github.com/stmarcin/repo-for-workshop-tgis` and clone it to your local settings.
++ Add upstream
++ Open new issue and `@mention` me!
++ Create a new branch (`new-branch-NumberOfYourFile`)
++ Edit *your* file, stage it and add to commit.
++ Push changes and open a **pull request**
++ In your pull request refer to your issue
+
+
+
+
+
+
+
+
