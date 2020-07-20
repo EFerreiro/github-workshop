@@ -62,7 +62,7 @@ with some extra functionalities:</span>
 ## Why do you (might) need it?
 
 ```{r, echo=FALSE, out.width = '70%'}
-knitr::include_graphics(here::here("rmd", "temp", "for_graph.svg"))
+knitr::include_graphics(here::here("img", "for_graph.svg"))
 ```
 
 ## Why do you need it for yourself?
@@ -110,7 +110,7 @@ e.g. https://github.com/r-spatial/leafgl
     + assignees, mentions and notifications  
 
 
-# Basic vocabulary {data-background=#4B0082}
+# Basic vocabulary: repository {data-background=#4B0082}
 
 ## Repo
 
@@ -266,67 +266,13 @@ knitr::include_graphics(here::here("img", "new_repo_07.png"))
 + create new, **public** repository on github
 + inlcude `README` and `.gitignore` (`R`)
 
-# Basic vocabulary {data-background=#4B0082}
+# Basic vocabulary: clone repo {data-background=#4B0082}
 
 ## Clone repo
 
 <span style="color:#FFA07A">Clone</span> creates a local *copy* of a remote repository
 
 It contains all project's files and full project's history. 
-
-
-
-## Commit
-
-<span style="color:#FFA07A">Commit</span> is a `snapshot` of the repository.
-
-```{r, echo=FALSE, out.width = '80%'}
-knitr::include_graphics(here::here("img", "github_commit_01.png"))
-```
-
-*Commits are cheap*.  
-Commit often. 
-
-## Commits 
-
-<p align = left>Each commit has its own identifier.</p>  
-
-```{r, echo=FALSE, out.width = '80%'}
-knitr::include_graphics(here::here("img", "github_commit_03.png"))
-```
-
-<p align = left>You can:  
-+ have an access to the repository at a given stage  
-+ revise changes made by particular commit</p>  
-
-## Revision of changes
-
-```{r, echo=FALSE, out.width = '80%'}
-knitr::include_graphics(here::here("img", "github_commit_02.png"))
-```
-
-## Revision of chages
-
-You can even compare binary files!  
-*Use `Display the rich diff`*
-
-```{r, echo=FALSE, out.width = '80%'}
-knitr::include_graphics(here::here("img", "github_commit_04.png"))
-```
-
-
-
-## Commit messages
-
-Each commit must contain a message.  
-Add **useful**, **self-explanatory** messages.  
-
-
-```{r, echo=FALSE, out.width = '60%'}
-knitr::include_graphics("https://imgs.xkcd.com/comics/git_commit.png")
-```
-
-<small>Source: *https://imgs.xkcd.com/comics/git_commit.png*</small>
 
 # Git workflow: clone repo {data-background=#4B0082}
 
@@ -378,7 +324,99 @@ Done!
 knitr::include_graphics(here::here("img", "clone_repo_06.png"))
 ```
 
+
+# Now it is your turn!<br><br>Clone your repo  {data-background=#008080}
+
+
+# Basic vocabulary:<br> commit, push and pull {data-background=#4B0082}
+
+## Commit
+
+<span style="color:#FFA07A">Commit</span> is a `snapshot` of the repository.
+
+```{r, echo=FALSE, out.width = '80%'}
+knitr::include_graphics(here::here("img", "github_commit_01.png"))
+```
+
+*Commits are cheap*.  
+Commit often. 
+
+## Commits 
+
+<p align = left>Each commit has its own identifier.</p>  
+
+```{r, echo=FALSE, out.width = '80%'}
+knitr::include_graphics(here::here("img", "github_commit_03.png"))
+```
+
+<p align = left>You can:  
++ have an access to the repository at a given stage  
++ revise changes made by a particular commit</p>  
+
+## Revision of changes
+
+```{r, echo=FALSE, out.width = '80%'}
+knitr::include_graphics(here::here("img", "github_commit_02.png"))
+```
+
+## Revision of chages
+
+You can even compare binary files!  
+*Use `Display the rich diff`*
+
+```{r, echo=FALSE, out.width = '80%'}
+knitr::include_graphics(here::here("img", "github_commit_04.png"))
+```
+
+## Commit messages
+
+Each commit must contain a message.  
+Add **useful**, **self-explanatory** messages.  
+
+
+```{r, echo=FALSE, out.width = '60%'}
+knitr::include_graphics("https://imgs.xkcd.com/comics/git_commit.png")
+```
+
+<small>Source: *https://imgs.xkcd.com/comics/git_commit.png*</small>
+
+## Push and pull changes
+
+It's all about syncing your local and remote repositories.
+
+<br> 
+<div style="text-align:left"> 
+<span style="color:#FFA07A">Push</span> chagnes: send recent commit(s) from your local repository to the remote one.  
+
+<span style="color:#FFA07A">Pull</span> repository: download recent commits from remote repository and update your local repository  
+
+<br> 
+
+**Tip 1**: Pull before push (sooner or later, this habit  helps to keep your mental health).
+
+**Tip 2**: Push often. Commit even more often.  
+Every time you push, you are making a cloud backup of your project.  
+Extra point: you get more *pit stops* you can refer to. 
+</div>
+
+
 # Git workflow: commits {data-background=#4B0082}
+
+## Git pane in RStudio
+
+```{r, echo=FALSE, out.width = '80%'}
+knitr::include_graphics(here::here("img", "git_rstudio_pane_06.png"))
+```
+
+1. <span style="color:#FFA07A">Pull</span> - update local repo using remote one 
+1. <span style="color:#FFA07A">Push</span> - send changes from your local repo to the remote one
+1. Options  
+    + <span style="color:#FFA07A">Revert</span> changes - discard changes made since the last `commit`
+    + Ignore - add a file (or files) to <span style="color:#FFA07A">`.gitignore`</span>
+    + <span style="color:#FFA07A">Open Shell</span>
+1. <span style="color:#FFA07A">Commit</span> selected files
+1. Revise changes offered by the laste commit
+1. Revise <span style="color:#FFA07A">history</span> of a project (all commits)
 
 ## File states
 
@@ -393,9 +431,39 @@ In case of further changes, you need unstage and stage it again.
 1. <span style="color:#FFA07A">Ignored</span>: git *doesn't see* nor it's interested whether they are changed or not.  
 You need to explicitly *inform* git to ignore a file
 
-
 ```{r, echo=FALSE, out.width = '80%'}
 knitr::include_graphics(here::here("img", "workflow_01.png"))
 ```
 
+## File stages in RStudio
 
++ <img src="https://github.com/stmarcin/github-workshop/raw/master/img/git_rstudio_pane_03a.png" style="vertical-align:middle" style="border: 0;">  <span style="color:#FCD5B5">Added</span>: new file added to repository.
+
++ <img src="https://github.com/stmarcin/github-workshop/raw/master/img/git_rstudio_pane_03b.png" style="vertical-align:middle" style="border: 0;">  <span style="color:#FCD5B5">Untracked</span> file.
+
++ <img src="https://github.com/stmarcin/github-workshop/raw/master/img/git_rstudio_pane_03c.png" style="vertical-align:middle" style="border: 0;">  <span style="color:#FCD5B5">Deleted</span> file (not available in repository anymore (**important** file can be found when browsing commits / history of repository).
+
++ <img src="https://github.com/stmarcin/github-workshop/raw/master/img/git_rstudio_pane_03d.png" style="vertical-align:middle" style="border: 0;">  <span style="color:#FCD5B5">Modified</span>: file has been changed since the last commit
+
+## Stage file in RStudy Git pane
+
+<div style="text-align:left"> 
+Select which changes (modify / add / delete) should be added to the commit
+(i.e. which changes will be *saved* together with the commit)
+</div>
+
+```{r, echo=FALSE, out.width = '80%'}
+knitr::include_graphics(here::here("img", "git_rstudio_pane_08.png"))
+```
+
+<div style="text-align:left"> 
+Unselected changes will be available only in the particular evnironment, but they cannot be `pushed` to the remote repository.  
+They have the *untracked* status.
+</div>
+## Workflow: remote & local
+
+<br>
+
+```{r, echo=FALSE, out.width = '80%'}
+knitr::include_graphics(here::here("img", "workflow_02.svg"))
+```
