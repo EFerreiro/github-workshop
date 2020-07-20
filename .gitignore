@@ -42,3 +42,4 @@ vignettes/*.pdf
 *.Rproj
 *.html
 rmd/temp
+img/temp
