@@ -595,6 +595,20 @@ Aborting commit due to empty commit message.
 
 </div>
 
+
+## Push commit to remote repository
+
+Once you finalize your commit, you can <span style="color:#FFA07A">push</span> your commit(s) to the remote repository. 
+
+
+```{r, echo=FALSE, out.width = '60%'}
+knitr::include_graphics(here::here("img", "github_commit_09.png"))
+```
+
+After a while, commit becames alive in your github repository (you need to refresh your browser).
+
+
+
 ## Changes in staged file
 
 <div style="text-align:left"> 
@@ -638,7 +652,7 @@ knitr::include_graphics(here::here("img", "workflow_03.png"))
 
 </div>
 
-# Now it is your turn!<br><br>Make your first commit {data-background=#008080}
+## Now it is your turn!<br>Make your first commit {data-background=#008080}
 
 ```{r, echo=FALSE, out.width = '70%'}
 knitr::include_graphics(here::here("img", "github_commit_05.png"))
@@ -647,11 +661,243 @@ knitr::include_graphics(here::here("img", "github_commit_05.png"))
 + Stage file `example_code.R` file  
 + Select <span style="color:#FFA07A">Commit</span> button
 
-# Now it is your turn!<br><br>Make your first commit {data-background=#008080}
+## Now it is your turn!<br>Make your first commit {data-background=#008080}
 
 ```{r, echo=FALSE, out.width = '70%'}
 knitr::include_graphics(here::here("img", "github_commit_06.png"))
 ```
 
-+ Stage file `example_code.R` file  
-+ Select <span style="color:#FFA07A">Commit</span> button
++ Add commit message  
++ Commit and push changes to the remote repository  
++ inspect repository on your github account
+
+# Now it is your turn!<br>Commit modified file {data-background=#008080}
+
++ Open `example_code.R` file in RStudio  
++ Open `exercice_description.R` file in RStudio  
++ Copy lines 25-26 from `exercice_description.R`.
++ Replace line 17 in `example_code.R` by copied lines
+```
+my_first_plot <- ggplot(data = mpg) +
+    geom_point(mapping = aes(x = displ, y = hwy))
+```
+
+```{r, echo=FALSE, out.width = '70%'}
+knitr::include_graphics(here::here("img", "github_commit_10.png"))
+```
+
+## Now it is your turn!<br>Commit modified file {data-background=#008080}
+
+<div style="text-align:left"> 
++ Stage modified file  
++ Revise changes 
+</div>
+
+```{r, echo=FALSE, out.width = '70%'}
+knitr::include_graphics(here::here("img", "github_commit_11.png"))
+```
+
+<div style="text-align:left"> 
++ Commit &  Push 
+</div>
+
+# Basic vocabulary: conflicts {data-background=#4B0082}
+
+## Resolving conflicts
+
+Conflict appears when different changes have been made to the same file since the last commit.  
+
+```{r, echo=FALSE, out.width = '70%'}
+knitr::include_graphics(here::here("img", "git_conflict.png"))
+```
+
+Conflicts have to be resolved.
+
+# Now it is your turn!<br>Create and resolve a conflict {data-background=#008080}
+
+## Now it is your turn!<br>Create and resolve a conflict {data-background=#008080}
+
+Open README file directly from your github remote repository:
+
+```{r, echo=FALSE, out.width = '50%'}
+knitr::include_graphics(here::here("img", "git_conflict_02.png"))
+```
+
+Edit the file, and commit changes:
+
+```{r, echo=FALSE, out.width = '50%'}
+knitr::include_graphics(here::here("img", "git_conflict_03.png"))
+```
+
+## Now it is your turn!<br>Create and resolve a conflict {data-background=#008080}
+
+<div style="text-align:left"> 
+
++ **WITHOUT pulling** changes, open README.md file in RStudio  
+and modify the file (as you wish, but differently than you have done via web).  
+
++ Save the file, stage it and add to the commit. 
+
++ Commit changes and **Push** them to the remote repository
+
+</div>
+
+## Now it is your turn!<br>Create and resolve a conflict {data-background=#008080}
+
+<div style="text-align:left"> 
+**Congratulations!** You have provoked your first git conflict.
+</div>
+
+```{r, echo=FALSE, out.width = '50%'}
+knitr::include_graphics(here::here("img", "git_conflict_04.png"))
+```
+
+<div style="text-align:left"> 
+**Bad news:** you need to somehow resolve it.
+</div>
+
+## Now it is your turn!<br>Create and resolve a conflict {data-background=#008080}
+
+<div style="text-align:left"> 
+
++ **Pull** remote file to your local repository.
+</div>
+
+```{r, echo=FALSE, out.width = '50%'}
+knitr::include_graphics(here::here("img", "git_conflict_05.png"))
+```
+
+<div style="text-align:left"> 
++ Open the file and make final changes to the *problematic* lines  
+(i.e. those between `<<<<<<<` and `>>>>>>>` followed by the commit id)
++ remove conflict markers (<span style="color:#FFA07A; background-color:rgba(255,244,204,.2)">`<<<<<<<`, `=======`, `>>>>>>>`</span>)
++ Commit and push your changes.  
+</div>
+**Resolved!**
+
+# Basic vocabulary: branches {data-background=#4B0082}
+
+## Branch 
+
+<span style="color:#FFA07A">Branch</span> is a parallel version of a repository.  
+
+```{r, echo=FALSE, out.width = '30%'}
+knitr::include_graphics(here::here("img", "git_branch_01.png"))
+```
+
+<div style="text-align:left"> 
+The **main** branch of the repository is a <span style="color:#FFA07A">**`master`**</span> branch. 
+
+By creating a new branch you duplicate a current state of the repository (all files, commits etc.). 
+</div>
+
+```{r, echo=FALSE, out.width = '50%'}
+knitr::include_graphics("https://docs.github.com/assets/images/help/branches/pr-retargeting-diagram1.png")
+```
+
+<small>Source: *https://docs.github.com/assets/images/help/branches/pr-retargeting-diagram1.png*</small>
+
+## Why to use branches? 
+
+<div style="text-align:left"> 
++ <span style="color:#FFA07A">Branch</span> permits you to work with your project without affecting the main stream.  
++ You can experiment with your code without any *harm* on previous version.
+You can easily discard changes if they don't work for you.  
++ You can take several different approaches and experiment which of them works the best.  
++ You can easy switch between branches, compare them against each other, revised proposed changes, etc.  
++ Many contributors may work with code in paralell.
++ Each branch can have multiple commits.
++ You can have multiple branches and you can create a branch from any previous branch.
+
+</div>
+```{r, echo=FALSE, out.width = '30%'}
+knitr::include_graphics(here::here("img", "git_branch_03.png"))
+```
+
+# Create new branch {data-background=#4B0082}
+
+## New branch via GitHub.com
+
+You can create new branch via GitHub.com web:
+
+```{r, echo=FALSE, out.width = '30%'}
+knitr::include_graphics(here::here("img", "git_branch_03.png"))
+```
+
+Name convention for branches is similar to repo one (e.g. `this-is-my-new-branch`)
+
+
+```{r, echo=FALSE, out.width = '30%'}
+knitr::include_graphics(here::here("img", "git_branch_04.png"))
+```
+
+```{r, echo=FALSE, out.width = '30%'}
+knitr::include_graphics(here::here("img", "git_branch_05.png"))
+```
+
+
+## New branch from GitHub.com to RStudio
+
+Once you create a new branch, it appears in your local repo once you **pull** the remote one.
+
+```{r, echo=FALSE, out.width = '30%'}
+knitr::include_graphics(here::here("img", "git_branch_06.png"))
+```
+
+```{r, echo=FALSE, out.width = '30%'}
+knitr::include_graphics(here::here("img", "git_branch_07.png"))
+```
+
+Now, you can <span style="color:#FFA07A">check out</span> to this new branch.  
+Any further commit will be added to this new branch, while `master` will be untouched.
+
+## New branch from RStudio
+
+You can create a new branch directly from RStudio:
+
+```{r, echo=FALSE, out.width = '25%'}
+knitr::include_graphics(here::here("img", "git_branch_07.png"))
+```
+```{r, echo=FALSE, out.width = '50%'}
+knitr::include_graphics(here::here("img", "git_branch_09.png"))
+```
+<div style="text-align:left"> 
+Select new name for the branch.  
+**Tip:** Add remote, preferably using the same name as in your local repository.
+The new branch appears also in your remote repository: 
+</div>  
+```{r, echo=FALSE, out.width = '20%'}
+knitr::include_graphics(here::here("img", "git_branch_08.png"))
+```
+
+
+
+# Now it is your turn!<br>Create a new branch and add a new commit {data-background=#008080}
+
+## Now it is your turn!<br>Create a new branch and add a new commit {data-background=#008080}
+
+
+
+
+
+
+
+# Basic vocabulary: Merge {data-background=#4B0082}
+
+## Merge
+
+Once you are ready to incorporate the changes you can <span style="color:#FFA07A">**merge**</span> them into your master branch.
+
+```{r, echo=FALSE, out.width = '30%'}
+knitr::include_graphics(here::here("img", "git_branch_02.png"))
+```
+
+
+
+
+
+
+
+
+
+
