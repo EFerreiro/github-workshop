@@ -44,14 +44,14 @@ Done!
   install.packages("usethis")
   ```
 
-1. Create local repository
+2. Create local repository
   ```
   usethis::use_git()
   ```
 
-1. Commit. Add unnecessary files to `.gitignore`.
+3. Commit. Add unnecessary files to `.gitignore`.
 
-1. Create a new repo on GitHub as a remote to your local one
+4. Create a new repo on GitHub as a remote to your local one
 
   ```
   usethis::use_github()
@@ -64,6 +64,74 @@ Note 1: use use_github() help to check its parameters (`?usethis::use_github()`)
 Note 2: in case of problems, check relevant chapter of [Happy Git and GitHub for the useR](https://happygitwithr.com/existing-github-last.html)
 
 </div> 
+
+
+
+# How to create  **.gitignore**? {data-background=#4B0082}
+
+## On GitHub when creating repository
+
+<br>
+
+```{r, echo=FALSE, out.width = '70%'}
+knitr::include_graphics(here::here("img", "create_gitignore_01.png"))
+```
+
+## On GitHub whenever
+
+<br> 
+
+```{r, echo=FALSE, out.width = '70%'}
+knitr::include_graphics(here::here("img", "create_gitignore_02.png"))
+```
+
+```{r, echo=FALSE, out.width = '70%'}
+knitr::include_graphics(here::here("img", "create_gitignore_03.png"))
+```
+
+## In RStudio from **`Git`** pane
+
+<br> 
+
+You can select which files you want to add to <span style="color:#FFA07A">**.gitignore**</span>
+
+<br> 
+
+```{r, echo=FALSE, out.width = '60%'}
+knitr::include_graphics(here::here("img", "create_gitignore_04.png"))
+```
+
+<br> 
+
+In the next step you can select where <span style="color:#FFA07A">**.gitignore**</span> will be located  
+and add whichever files you want, even those which do not yet exist
+
+
+## In R using `{usethis}` package
+
+<br> 
+
+<div style="text-align:left"> 
+
++ `use_git_ignore()` *tells* git to ignore particular file(s)
+
+```
+usethis::use_git_ignore(ignores, directory = "."
+```
+
++ `edit_git_ignore()` opens `.gitignore` file so you can edit it manually. 
+
+```
+usethis::edit_git_ignore()
+```
+
+</div>
+
+
+
+
+
+
 
 
 # exercises {data-background=#008080}

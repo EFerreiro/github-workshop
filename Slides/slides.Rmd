@@ -55,6 +55,13 @@ with some extra functionalities:</span>
     + unlimited private repositories
     + unlimited collaborators 
 
+## GitHub repo page
+
+```{r, echo=FALSE, out.width = '120%'}
+knitr::include_graphics(here::here("img", "github_main.png"))
+```
+<small>Source: *https://github.com/stmarcin/github-workshop*</small>
+
 
 # Why do you (might) need it? {data-background=#4B0082}
 
@@ -114,6 +121,8 @@ e.g. https://github.com/r-spatial/leafgl
 
 ## Repo
 
+<div style="text-align:left"> 
+
 <span style="color:#FFA07A">Repo</span>sitory is like a main *folder* of your project.  
 It may contain any type of files, (sub)folders etc.  
 
@@ -128,6 +137,7 @@ Golden rule: <span style="color:#FFA07A">**one project one repo**</span>sitory.
 Describes the repo, may contain documentation, use-cases or  
 any other information you think may be useful for a potential user (including yourself!)
 
+</div> 
 
 # Create new repo  {data-background=#4B0082}
 
@@ -162,6 +172,12 @@ Go to your GitHub account and select <span style="color:#FFA07A">**New repositor
 knitr::include_graphics(here::here("img", "new_repo_01.png"))
 ```
 
+## Create new repository on GitHub
+
+```{r github brand new repo, echo=FALSE, out.width = '70%'}
+knitr::include_graphics(here::here("img", "new_repo_00.png"))
+```
+
 ## Name your repository
 
 + Should be a character string (without space)
@@ -190,7 +206,7 @@ Besides repository name you can:
 
 + add a brief <span style="color:#FFA07A">description</span>  (read: **you should**)
 
-+ create <span style="color:#FFA07A">`README.md`</span> file (yes, you **want** do that)
++ create <span style="color:#FFA07A">`README.md`</span> file (yes, you **want** to do that)
 
 ```{r, echo=FALSE}
 knitr::include_graphics(here::here("img", "new_repo_08_readme.png"))
@@ -266,9 +282,13 @@ knitr::include_graphics(here::here("img", "new_repo_07.png"))
 + create new, **public** repository on github
 + inlcude `README` and `.gitignore` (`R`)
 
+
+
 # Basic vocabulary: clone repo {data-background=#4B0082}
 
 ## Clone repo
+
+<br>  
 
 <span style="color:#FFA07A">Clone</span> creates a local *copy* of a remote repository
 
@@ -327,6 +347,91 @@ knitr::include_graphics(here::here("img", "clone_repo_06.png"))
 
 # Now it is your turn!<br><br>Clone your repo  {data-background=#008080}
 
+# Ignoring files <span style="color:#FFA07A">(**.gitignore**)</span> {data-background=#4B0082}
+
+## What does <span style="color:#FFA07A">(**.gitignore**)</span> do?   
+
+Use **.gitignore** for all those files that should not be taken into account by Git so they are:
+
++ excluded from version control and not tracked by Git 
+
++ not inlcuded to any commit
+
++ not *pushed* to remote repository
+
++ not shared with colaborators / published
+
+## Types of <span style="color:#FFA07A">**.gitignore**</span>
+
+<div style="text-align:left"> 
+
+<br>
+
++ <span style="background-color:rgba(255,244,204,.1)">**repository**</span>  <span style="color:#FFA07A">.gitignore</span>  
+  
+  + Located in the root folder of the repository
+  + Created together with repository by GitHub
+
+<br>
+
++ **local**  <span style="color:#FFA07A">.gitignore</span>  
+
+  + Located in a given folder
+  + refer to files of a given folder
+
+<br>
+
++ **global** <span style="color:#FFA07A">.gitignore</span> for every Git repository on your computer  
+
+</div>
+
+## What to add to  **.gitignore**?
+
+Anything we don't want or don't need to keep track of 
+
++ user-specific files / settings (e.g. <span style="color:#FFA07A">`MyProjectName.Rproj`)  
++ notes & drafts 
++ data, in particular large files
++ outputs of our code: tables, figures, html rendered from Rmarkdown files, etc.
+
+
++ <span style="color:#FFA07A; background-color:rgba(255,244,204,.1)">Any personal / confidential data</span>:  
+  + passwords  
+  + API keys  
+
+## How to understand <span style="color:#FFA07A">**.gitignore**</span>?
+
++ Anything after <span style="color:#FFA07A">`#`</span> is ignored
+
++ <span style="color:#FFA07A">`*.Rmd`</span> ingore all `.Rmd` files (`*` replace any character(s)
+
++ <span style="color:#FFA07A">`!main.Rmd`</span> state that `main.Rmd` should be tracked (not ingored)
+
++ <span style="color:#FFA07A">`test.R`</span> ignore test.R file
+
++ <span style="color:#FFA07A">`/test.R`</span> ignore `test.R` file in a folder where `.gitignore` is located
+
++ <span style="color:#FFA07A">`test/test.R`</span> ignore `test.R` file in a `test` folder
+
++ <span style="color:#FFA07A">`test/`</span> ignore all files in a `test` folder
+
+**Tip:** use templates, manually add what you need.
+
+
+# Now it is your turn!<br><br>Modify your `.gitignore` file {data-background=#008080}
+
+<br>
+
+<div style="text-align:left"> 
+
++ add a comment `my files` and include:  
+
+  + all files of the `.Rproj` type  
+  + all files in the (future) `temporary` folder  
+
++ revise list of files in your git pane
+
+</div>
 
 # Basic vocabulary:<br> commit, push and pull {data-background=#4B0082}
 
@@ -435,13 +540,14 @@ You need to explicitly *inform* git to ignore a file
 knitr::include_graphics(here::here("img", "workflow_01.png"))
 ```
 
-## File stages in RStudio
+## File states in RStudio
 
 + <img src="https://github.com/stmarcin/github-workshop/raw/master/img/git_rstudio_pane_03a.png" style="vertical-align:middle" style="border: 0;">  <span style="color:#FCD5B5">Added</span>: new file added to repository.
 
 + <img src="https://github.com/stmarcin/github-workshop/raw/master/img/git_rstudio_pane_03b.png" style="vertical-align:middle" style="border: 0;">  <span style="color:#FCD5B5">Untracked</span> file.
 
-+ <img src="https://github.com/stmarcin/github-workshop/raw/master/img/git_rstudio_pane_03c.png" style="vertical-align:middle" style="border: 0;">  <span style="color:#FCD5B5">Deleted</span> file (not available in repository anymore (**important** file can be found when browsing commits / history of repository).
++ <img src="https://github.com/stmarcin/github-workshop/raw/master/img/git_rstudio_pane_03c.png" style="vertical-align:middle" style="border: 0;">  <span style="color:#FCD5B5">Deleted</span> file: it is not available in repository anymore  
+**important:** the file can be found when browsing commits / history of repository.
 
 + <img src="https://github.com/stmarcin/github-workshop/raw/master/img/git_rstudio_pane_03d.png" style="vertical-align:middle" style="border: 0;">  <span style="color:#FCD5B5">Modified</span>: file has been changed since the last commit
 
@@ -458,8 +564,52 @@ knitr::include_graphics(here::here("img", "git_rstudio_pane_08.png"))
 
 <div style="text-align:left"> 
 Unselected changes will be available only in the particular evnironment, but they cannot be `pushed` to the remote repository.  
-They have the *untracked* status.
+The file(s) or their recent changes are not *untracked*.
 </div>
+
+## Commit in RStudio Git pane
+
+<div style="text-align:left"> 
+
+Once you want to commit changes, you are taken to the new window.  
+You can revise changes file by file and decide which of them you want to add to the commit.
+
+</div>
+
+```{r, echo=FALSE, out.width = '80%'}
+knitr::include_graphics(here::here("img", "github_commit_07.png"))
+```
+
+## Add a commit message
+
+<br>
+
+<div style="text-align:left"> 
+
+Finally, you **have to** add a commit message. Otherwise you get the following error:  
+
+
+```
+Aborting commit due to empty commit message.
+```
+
+</div>
+
+## Changes in staged file
+
+<div style="text-align:left"> 
+If you stage a file and then you make some extra changes, they will **not** be added to the commit.  
+</div>
+
+```{r, echo=FALSE, out.width = '60%'}
+knitr::include_graphics(here::here("img", "github_commit_08.png"))
+```
+
+<div style="text-align:left"> 
+In order to include them in the current commit, you need to  
+unstage the file and stage it again.
+</div>
+
 ## Workflow: remote & local
 
 <br>
@@ -467,3 +617,41 @@ They have the *untracked* status.
 ```{r, echo=FALSE, out.width = '80%'}
 knitr::include_graphics(here::here("img", "workflow_02.svg"))
 ```
+
+## Workflow: remote & two different locals
+
+```{r, echo=FALSE, out.width = '70%'}
+knitr::include_graphics(here::here("img", "workflow_03.png"))
+```
+
+# Now it is your turn!<br><br>Make your first commit {data-background=#008080}
+
+<br>
+
+<div style="text-align:left"> 
+
++ Copy `example_code.R` file to your project folder.  
++ Create `temporary` folder  
++ Copy `exercice_description.R` to the `temporary` folder  
++ Revise your Git pane in RStudio  
+
+
+</div>
+
+# Now it is your turn!<br><br>Make your first commit {data-background=#008080}
+
+```{r, echo=FALSE, out.width = '70%'}
+knitr::include_graphics(here::here("img", "github_commit_05.png"))
+```
+
++ Stage file `example_code.R` file  
++ Select <span style="color:#FFA07A">Commit</span> button
+
+# Now it is your turn!<br><br>Make your first commit {data-background=#008080}
+
+```{r, echo=FALSE, out.width = '70%'}
+knitr::include_graphics(here::here("img", "github_commit_06.png"))
+```
+
++ Stage file `example_code.R` file  
++ Select <span style="color:#FFA07A">Commit</span> button
