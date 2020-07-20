@@ -14,6 +14,56 @@ output:
 
 # Annex {data-background=#8B008B}
 
-# notes {data-background=#4B0082}
+# Create new repo {data-background=#4B0082}
+
+## Create repo for an existing project
+
+Do you already have R project and need to create GitHub repo for it?  
+**No problem!**
+
+<br> 
+
+<p align = left>The easiest way to do that (no configuration needed):</p>
+
+1. Create a new repo on `GitHub` (remember to include `.gitignore`);  
+1. Clone the repo to you desktop
+1. Copy your project to the one you created when cloning your repo.
+1. Commit the files of your choice (adding unnecessary to `.gitignore`)
+
+<br> 
+
+Done!
+
+## Using `{usethis}` package
+
+<div style="text-align:left"> 
+
+1. install `{usethis}` package  
+
+  ```
+  install.packages("usethis")
+  ```
+
+1. Create local repository
+  ```
+  usethis::use_git()
+  ```
+
+1. Commit. Add unnecessary files to `.gitignore`.
+
+1. Create a new repo on GitHub as a remote to your local one
+
+  ```
+  usethis::use_github()
+  ```
+
+<br>
+
+Note 1: use use_github() help to check its parameters (`?usethis::use_github()`).  
+
+Note 2: in case of problems, check relevant chapter of [Happy Git and GitHub for the useR](https://happygitwithr.com/existing-github-last.html)
+
+</div> 
+
 
 # exercises {data-background=#008080}
