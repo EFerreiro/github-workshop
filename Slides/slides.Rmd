@@ -703,6 +703,15 @@ knitr::include_graphics(here::here("img", "github_commit_11.png"))
 
 # Basic vocabulary: conflicts {data-background=#4B0082}
 
+## Conflicts
+
+```{r, echo=FALSE, out.width = '40%'}
+knitr::include_graphics("https://imgs.xkcd.com/comics/git.png")
+```
+
+<small>Source: *https://imgs.xkcd.com/comics/git.png*</small>
+
+
 ## Resolving conflicts
 
 Conflict appears when different changes have been made to the same file since the last commit.  
@@ -862,7 +871,7 @@ knitr::include_graphics(here::here("img", "git_branch_07.png"))
 knitr::include_graphics(here::here("img", "git_branch_09.png"))
 ```
 <div style="text-align:left"> 
-Select new name for the branch.  
+Select a name for the new branch.  
 **Tip:** Add remote, preferably using the same name as in your local repository.
 The new branch appears also in your remote repository: 
 </div>  
@@ -876,13 +885,22 @@ knitr::include_graphics(here::here("img", "git_branch_08.png"))
 
 ## Now it is your turn!<br>Create a new branch and add a new commit {data-background=#008080}
 
+<div style="text-align:left"> 
++ Create new branch  
++ Add some text to README.md (whatever you wish)  
++ Replace lines 17-18 in `example_code.R` with lines 31-33 from `exercice_description.R`  
++ Stage both files and commit  
+</div>
+```{r, echo=FALSE, out.width = '50%'}
+knitr::include_graphics(here::here("img", "git_branch_10.png"))
+```
 
+<div style="text-align:left"> 
++ **Push** changes to the remote repository  
++ Inspect your remote repository on GitHub.com
+</div>
 
-
-
-
-
-# Basic vocabulary: Merge {data-background=#4B0082}
+# Basic vocabulary:<br>Pull request & merge {data-background=#4B0082}
 
 ## Merge
 
@@ -892,12 +910,119 @@ Once you are ready to incorporate the changes you can <span style="color:#FFA07A
 knitr::include_graphics(here::here("img", "git_branch_02.png"))
 ```
 
+It means, that all commits from a given branch will be inlcuded into your `master` branch. 
+
+## Compare branches
+
+<div style="text-align:left"> 
+On GitHub.com you can compare two branches.  
+To do so you can either:
+
++ add `/compare` to your repository path  
+<small>(e.g. `https://github.com/stmarcin/github-workshop/compare`) </small>  
+
+or  
++ Click on `Compare & pull request` and scroll down. 
+</div> 
+
+```{r, echo=FALSE, out.width = '70%'}
+knitr::include_graphics(here::here("img", "git_branch_11.png"))
+```
+
+## Compare branches via GitHub.com
+
+```{r, echo=FALSE, out.width = '80%'}
+knitr::include_graphics(here::here("img", "git_branch_12.png"))
+```
+
+## Pull request 
+
+<div style="text-align:left"> 
++ <span style="color:#FFA07A">**Pull request**</span> opens the discussion on proposed changes.  
+
++ By filling a pull request you are asking a repo owner to pull your changes to the repository.  
+Note: you can *ask* yourself (as repo owner) as well!  
+
++ Submitted changes are to be reviewed and either accepted or rejected by a repository's owner.
+</div>
+
+## Add a comment to the pull request
+
+```{r, echo=FALSE, out.width = '80%'}
+knitr::include_graphics(here::here("img", "git_branch_13.png"))
+```
+
+## Submit the pull request
+
+```{r, echo=FALSE, out.width = '80%'}
+knitr::include_graphics(here::here("img", "git_branch_14.png"))
+```
+
+## Delete unnecessary branch
+
+Once you **confirm** merge you can delete an old branch.
+
+```{r, echo=FALSE, out.width = '80%'}
+knitr::include_graphics(here::here("img", "git_branch_15.png"))
+```
+
+Go back to RStudio. Check out to `master` and click **pull**
+
+<div style="color:#FFA07A; background-color:rgba(255,244,204,.1)">
+```
+>>> C:/Program Files/Git/bin/git.exe pull
+From https://github.com/stmarcin/test_workshop
+   2387ab3..4e6e32c  master                  -> origin/master
+Updating 2387ab3..4e6e32c
+Fast-forward
+ README.md      | 1 +
+ example_code.R | 5 +++--
+ 2 files changed, 4 insertions(+), 2 deletions(-)
+```
+</div>
 
 
+## Delete branch in RStudio
+
+The branch is deleted from the remote repository but it is still visible in RStudio pop-up menu:
+
+```{r, echo=FALSE, out.width = '20%'}
+knitr::include_graphics(here::here("img", "git_branch_16.png"))
+```
+
+## Delete branch in RStudio
+
+<div style="text-align:left"> 
+In order to remove it you need:
+
++ go to **(S)hell**  
+</div>
+
+```{r, echo=FALSE, out.width = '60%'}
+knitr::include_graphics(here::here("img", "git_rstudio_pane_06.png"))
+```
 
 
+<div style="text-align:left"> 
++ type the following:</div>  
+
+<div style="color:#FFA07A; background-color:rgba(255,244,204,.1)">
+```
+git fetch -p
+```
+</div>
+
+<div style="text-align:left"> 
++ and delete a branch
+</div>  
+
+<div style="color:#FFA07A; background-color:rgba(255,244,204,.1)">
+```
+git branch -d name-of-your-branch
+```
+</div>
 
 
+# Now it is your turn!<br>Merge a branch {data-background=#008080}
 
-
-
++ 
