@@ -53,7 +53,7 @@ Even though you can use git from any operating system, please note that part of 
 
 In order to save the time during the workshop, it is necessary to **previously**:  
 
-#### **Create an account on github** (in case you don't have one)  
+### **Create an account on github** (in case you don't have one)  
 
 1. Go to [https://github.com/](https://github.com/){target="blank"}  
 
@@ -75,7 +75,7 @@ In order to save the time during the workshop, it is necessary to **previously**
 
 1. Done!
 
-#### **Install R & RStudio**
+### **Install R & RStudio**
 
 1. **Install R**: get installer from [here](https://cran.r-project.org/){target="blank"} - available on Windows, MacOS or Linux.
 
@@ -83,7 +83,7 @@ In order to save the time during the workshop, it is necessary to **previously**
 
 Both installations are quite straightforward processes. 
 
-#### **Install Git**
+### **Install Git**
 
 Download and install Git: I'm not going to reinvent the wheel. Just follow these great [instructions](https://happygitwithr.com/install-git.html){target="blank"} by *Jenny Bryan*. My recommendations: install [Git for **Windows**](https://gitforwindows.org/){target="blank"} or [**MacOS** or **Linux**](https://git-scm.com/downloads){target="blank"}. 
 
@@ -107,7 +107,7 @@ knitr::include_graphics("https://github.com/stmarcin/github-workshop/raw/master/
 knitr::include_graphics("https://github.com/stmarcin/github-workshop/raw/master/img/git_install_04.png")
 ```
 
-## **Configure Git**   
+### **Configure Git**   
 
 I know, it sounds scary, but you only need to do the following:
 
@@ -127,7 +127,7 @@ git config --global user.email 'your_email@the.same.as.for.github.account'
 
 Done!
 
-## **Connect Git to RStudio**  
+### **Connect Git to RStudio**  
 
 It *should* be done automatically, but you may wish to confirm that RStudio *see* the Git.
 
@@ -156,7 +156,7 @@ a) restart RStudio. Git pane should appeared in your RStudio (if you have the de
 <br>  
 
 
-#### **Install GitHub desktop**
+### **Install GitHub desktop**
 
 That's why I recommend to use Windows (or MacOs): [GitHub desktop](https://desktop.github.com/){target="blank"}. 
 
