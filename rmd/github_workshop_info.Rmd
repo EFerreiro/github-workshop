@@ -166,13 +166,13 @@ Once GitHub desktop is installed you need to login to your GitHub account:
 
     
     ```{r github options 1, echo=FALSE, out.width = '40%'}
-    knitr::include_graphics("https://github.com/stmarcin/github-workshop/raw/master/img/Github_desktop1.png")
+    knitr::include_graphics("https://github.com/stmarcin/github-workshop/raw/master/img/github_desktop_01.png")
     ```
 
 1. Sign in to your account:
 
     ```{r github options 2, echo=FALSE, out.width = '40%'}
-    knitr::include_graphics("https://github.com/stmarcin/github-workshop/raw/master/img/Github_desktop2.png")
+    knitr::include_graphics("https://github.com/stmarcin/github-workshop/raw/master/img/github_desktop_02.png")
     ```
     
     
