@@ -66,12 +66,9 @@ with some extra functionalities:</span>
 
 ## GitHub repo page
 
-```{r, echo=FALSE, out.width = '120%'}
+```{r, echo=FALSE, out.width = '100%'}
 knitr::include_graphics(here::here("img", "github_main.png"))
 ```
-<small>Source: *https://github.com/stmarcin/github-workshop*</small>
-
-
 
 
 
@@ -107,23 +104,23 @@ and easily switch between them
 
 ## Why do you need it for sharing?
 
-+ searchable repositories  
-+ created to share a code  
-+ easy to attached a web-based description of your code (`README.md`) file  
++ <span style="color:#FFA07A">searchable</span> repositories  
++ created to <span style="color:#FFA07A">share</span> a code  
++ easy to attach a web-based <span style="color:#FFA07A">description of your code</span> (`README.md`) file  
 e.g. https://github.com/r-spatial/leafgl
-+ easy to install directly from github  
++ easy to <span style="color:#FFA07A">install directly from github</span>  
 (e.g. `remotes::install_github("r-lib/remotes")` )
 
 ## Why do you need it for collaboration?
 
-+ **Git** is distributed: all collaborators work on their own local copy  
++ **Git** is <span style="color:#FFA07A">distributed</span>: all collaborators work on their own local copy  
 (code, its versions and all the **history** of changes)  
-+ All collaborators can work simultaneously
-+ Grant access even to private repositories  
-+ Share (and test!) a developer version of your code  
-+ pull request: revise changes before merging them  
-+ contributions are transparent  
-+ issues:  
++ All collaborators can work <span style="color:#FFA07A">simultaneously</span>  
++ Grant access even to <span style="color:#FFA07A">private</span> repositories  
++ Share (and test!) a <span style="color:#FFA07A">developer version</span> of your code  
++ pull request: <span style="color:#FFA07A">revise changes before merging</span> them  
++ contributions are <span style="color:#FFA07A">transparent</span>  
++ <span style="color:#FFA07A">issues</span>:  
     + search for help, ask questions and discuss, request new features / modifications  
     + easy to link to commits, cross-connect to other issues, bug tracker  
     + assignees, mentions and notifications  
@@ -151,7 +148,7 @@ any other information you think may be useful for a potential user (including yo
 
 </div> 
 
-# Create new repo  {data-background=#4B0082}
+# Create a new repo  {data-background=#4B0082}
 
 <style type="text/css">
 .clearer {clear: both}
@@ -172,7 +169,7 @@ any other information you think may be useful for a potential user (including yo
 }
 </style>
 
-## Create remote repository on GitHub
+## Create a remote repository on GitHub
 
 <br>  
 
@@ -184,7 +181,7 @@ Go to your GitHub account and select <span style="color:#FFA07A">**New repositor
 knitr::include_graphics(here::here("img", "new_repo_01.png"))
 ```
 
-## Create new repository on GitHub
+## Create a new repository on GitHub
 
 ```{r github brand new repo, echo=FALSE, out.width = '70%'}
 knitr::include_graphics(here::here("img", "new_repo_00.png"))
@@ -224,22 +221,22 @@ Besides repository name you can:
 knitr::include_graphics(here::here("img", "new_repo_08_readme.png"))
 ```
 
-## Make decision: public or private?
+## Public or private?<br>Be brave and make a decision  
 
 <br> 
 
-+ **public** repository is, well, public (anyone can see it, clone it etc.)
++ <span style="color:#FFA07A">**public**</span> repository is, well, public (anyone can see it, clone it etc.)
 
 ```{r, echo=FALSE, out.width = '50%'}
 knitr::include_graphics(here::here("img", "new_repo_09_public.png"))
 ```
 
-+ **private** repository is visible only for you or anyone you grant access to it. It is a good solution:      
++ <span style="color:#FFA07A">**private**</span> repository is visible only for you or anyone you grant an access to it. It is a good solution for:      
 
   + testing, experiments, etc.
-  + for early-stage projects (for some reason you don't want to share it yet)  
-  + for all *in-progress* stuff  
-  + for any project should not be publicly visible  
+  + early-stage projects (for some reason you don't want to share it, yet)  
+  + all *in-progress* stuff  
+  + any project should not be publicly visible  
   
 ## Public to private or private to public?<br>Not a problem! (usually)  
   
@@ -257,12 +254,12 @@ knitr::include_graphics(here::here("img", "new_repo_11_danger_zone.png"))
 
 ## Add **.gitignore**
 
-<span style="color:#FFA07A">**.gitignore**</span> contains a list of all files that **should not** be included in the repo.
+<span style="color:#FFA07A">**.gitignore**</span> contains a list of all the files that **should not** be included in the repo.
 
 It's highly recommended to inlcude <span style="color:#FFA07A">**.gitignore**</span> into your repository.  
 
 GitHub offers a list of `.gitignore` templates.  
-Select the one which fits you the best.
+Select the one which fits you best.
 
 ```{r, echo=FALSE, out.width = '35%'}
 knitr::include_graphics(here::here("img", "new_repo_04_gitignore.png"))
@@ -283,7 +280,7 @@ knitr::include_graphics(here::here("img", "new_repo_05_licence.png"))
 knitr::include_graphics(here::here("img", "new_repo_06.png"))
 ```
 
-## The look of a brand new repository
+## A brand new repository
 
 ```{r, echo=FALSE, out.width = '80%'}
 knitr::include_graphics(here::here("img", "new_repo_07.png"))
@@ -291,14 +288,14 @@ knitr::include_graphics(here::here("img", "new_repo_07.png"))
 
 # Now it is your turn!<br><br>Create your first repository  {data-background=#008080}
 
-+ create new, **public** repository on github
++ create a new, **public** repository on GitHub
 + inlcude `README` and `.gitignore` (`R`)
 
 
 
 # Basic vocabulary: clone repo {data-background=#4B0082}
 
-## Clone repo
+## Clone a repo
 
 <br>  
 
@@ -306,9 +303,9 @@ knitr::include_graphics(here::here("img", "new_repo_07.png"))
 
 It contains all project's files and full project's history. 
 
-# Git workflow: clone repo {data-background=#4B0082}
+# Git workflow: clone a repo {data-background=#4B0082}
 
-## Clone new repo
+## Clone a new repo
 
 1. You need to download (<span style="color:#FFA07A">clone</span>) repo from github
 
@@ -316,7 +313,7 @@ It contains all project's files and full project's history.
 knitr::include_graphics(here::here("img", "clone_repo_01.png"))
 ```
 
-## Clone new repo (RStudio)
+## Clone a new repo (RStudio)
 
 2. Create new RStudio project...
 
@@ -340,7 +337,7 @@ knitr::include_graphics(here::here("img", "clone_repo_04.png"))
 </div><div class="clearer"></div>
 
 
-## Clone new repo (RStudio)
+## Clone a new repo (RStudio)
 
 4. Paste link to the repo and select its location
 
@@ -348,7 +345,7 @@ knitr::include_graphics(here::here("img", "clone_repo_04.png"))
 knitr::include_graphics(here::here("img", "clone_repo_05.png"))
 ```
 
-## Clone new repo (RStudio)
+## Clone a new repo (RStudio)
 
 Done!
 
@@ -363,15 +360,17 @@ knitr::include_graphics(here::here("img", "clone_repo_06.png"))
 
 ## What does <span style="color:#FFA07A">(**.gitignore**)</span> do?   
 
-Use **.gitignore** for all those files that should not be taken into account by Git so they are:
+Use **.gitignore** for all those files that <span style="color:#FFA07A">should not be taken into account by Git so they are:
 
-+ excluded from version control and not tracked by Git 
++ excluded from the version control and <span style="color:#FFA07A">not tracked</span> by Git 
 
-+ not inlcuded to any commit
++ not inlcuded to any <span style="color:#FFA07A">commit</span>
 
-+ not *pushed* to remote repository
++ not *pushed* to <span style="color:#FFA07A">remote</span> repository
 
-+ not shared with colaborators / published
++ not <span style="color:#FFA07A">shared</span> with colaborators / published
+
+They only reside on your local machine.
 
 ## Types of <span style="color:#FFA07A">**.gitignore**</span>
 
@@ -382,14 +381,14 @@ Use **.gitignore** for all those files that should not be taken into account by 
 + <span style="background-color:rgba(255,244,204,.1)">**repository**</span>  <span style="color:#FFA07A">.gitignore</span>  
   
   + Located in the root folder of the repository
-  + Created together with repository by GitHub
+  + Created together with the repository by GitHub
 
 <br>
 
 + **local**  <span style="color:#FFA07A">.gitignore</span>  
 
   + Located in a given folder
-  + refer to files of a given folder
+  + refers to files of a given folder
 
 <br>
 
@@ -407,7 +406,7 @@ Anything we don't want or don't need to keep track of
 + outputs of our code: tables, figures, html rendered from Rmarkdown files, etc.
 
 
-+ <span style="color:#FFA07A; background-color:rgba(255,244,204,.1)">Any personal / confidential data</span>:  
++ <span style="color:#FFA07A; background-color:rgba(255,244,204,.1)">**Any personal / confidential data**</span>:  
   + passwords  
   + API keys  
 
@@ -415,19 +414,19 @@ Anything we don't want or don't need to keep track of
 
 + Anything after <span style="color:#FFA07A">`#`</span> is ignored
 
-+ <span style="color:#FFA07A">`*.Rmd`</span> ingore all `.Rmd` files (`*` replace any character(s)
++ <span style="color:#FFA07A">`*.Rmd`</span> ingores all `.Rmd` files (`*` replace any character(s)
 
-+ <span style="color:#FFA07A">`!main.Rmd`</span> state that `main.Rmd` should be tracked (not ingored)
++ <span style="color:#FFA07A">`!main.Rmd`</span> states that `main.Rmd` should be tracked (not ingored)
 
-+ <span style="color:#FFA07A">`test.R`</span> ignore test.R file
++ <span style="color:#FFA07A">`test.R`</span> ignores test.R file
 
-+ <span style="color:#FFA07A">`/test.R`</span> ignore `test.R` file in a folder where `.gitignore` is located
++ <span style="color:#FFA07A">`/test.R`</span> ignores `test.R` file in a folder where `.gitignore` is located
 
-+ <span style="color:#FFA07A">`test/test.R`</span> ignore `test.R` file in a `test` folder
++ <span style="color:#FFA07A">`test/test.R`</span> ignores `test.R` file in a `test` folder
 
-+ <span style="color:#FFA07A">`test/`</span> ignore all files in a `test` folder
++ <span style="color:#FFA07A">`test/`</span> ignores all files in a `test` folder
 
-**Tip:** use templates, manually add what you need.
+**Tip:** use templates, add manually what you need.
 
 
 # Now it is your turn!<br><br>Modify your `.gitignore` file {data-background=#008080}
@@ -503,9 +502,9 @@ It's all about syncing your local and remote repositories.
 
 <br> 
 <div style="text-align:left"> 
-<span style="color:#FFA07A">Push</span> chagnes: send recent commit(s) from your local repository to the remote one.  
+<span style="color:#FFA07A">Push</span> chagnes: sends recent commit(s) from your local repository to the remote one.  
 
-<span style="color:#FFA07A">Pull</span> repository: download recent commits from remote repository and update your local repository  
+<span style="color:#FFA07A">Pull</span> repository: downloads recent commits from remote repository and update your local repository  
 
 <br> 
 
@@ -525,11 +524,11 @@ Extra point: you get more *pit stops* you can refer to.
 knitr::include_graphics(here::here("img", "git_rstudio_pane_06.png"))
 ```
 
-1. <span style="color:#FFA07A">Pull</span> - update local repo using remote one 
-1. <span style="color:#FFA07A">Push</span> - send changes from your local repo to the remote one
+1. <span style="color:#FFA07A">Pull</span> - updates local repo using remote one 
+1. <span style="color:#FFA07A">Push</span> - sends changes from your local repo to the remote one
 1. Options  
-    + <span style="color:#FFA07A">Revert</span> changes - discard changes made since the last `commit`
-    + Ignore - add a file (or files) to <span style="color:#FFA07A">`.gitignore`</span>
+    + <span style="color:#FFA07A">Revert</span> changes - discards changes made since the last `commit`
+    + Ignore - adds a file (or files) to <span style="color:#FFA07A">`.gitignore`</span>
     + <span style="color:#FFA07A">Open Shell</span>
 1. <span style="color:#FFA07A">Commit</span> selected files
 1. Revise changes offered by the laste commit
@@ -538,15 +537,15 @@ knitr::include_graphics(here::here("img", "git_rstudio_pane_06.png"))
 ## File states
 
 1. <span style="color:#9BBB59">Committed</span>: form part of the repo in the current form.  
-Git keeps their most recent state and full history of changes  
+Git keeps their most recent state and full history of changes.  
 
-1. <span style="color:#FD1B1A">Untracked</span>: git *sees* them but has no clue what's your point, yet
+1. <span style="color:#FD1B1A">Untracked</span>: git *sees* them but has no clue what's your point, yet.
 
 1. <span style="color:#FCD5B5">Staged</span>: their current form is *frozen* and can be added to  *commit*.  
 In case of further changes, you need unstage and stage it again.  
 
 1. <span style="color:#FFA07A">Ignored</span>: git *doesn't see* nor it's interested whether they are changed or not.  
-You need to explicitly *inform* git to ignore a file
+You need to explicitly *inform* git to ignore a file.
 
 ```{r, echo=FALSE, out.width = '80%'}
 knitr::include_graphics(here::here("img", "workflow_01.png"))
@@ -617,7 +616,8 @@ Once you finalize your commit, you can <span style="color:#FFA07A">push</span> y
 knitr::include_graphics(here::here("img", "github_commit_09.png"))
 ```
 
-After a while, commit becames alive in your github repository (you need to refresh your browser).
+After a while, commit becomes alive in your github repository  
+(you need to refresh your browser).
 
 
 
@@ -823,35 +823,31 @@ knitr::include_graphics("https://docs.github.com/assets/images/help/branches/pr-
 
 <div style="text-align:left"> 
 + <span style="color:#FFA07A">Branch</span> permits you to work with your project without affecting the main stream.  
-+ You can experiment with your code without any *harm* on previous version.
-You can easily discard changes if they don't work for you.  
-+ You can take several different approaches and experiment which of them works the best.  
-+ You can easy switch between branches, compare them against each other, revised proposed changes, etc.  
-+ Many contributors may work with code in paralell.
-+ Each branch can have multiple commits.
-+ You can have multiple branches and you can create a branch from any previous branch.
++ You can <span style="color:#FFA07A">experiment</span> with your code without any *harm* on previous version.
+You can easily <span style="color:#FFA07A">discard changes</span> if they don't work for you.  
++ You can take <span style="color:#FFA07A">several different approaches</span> and experiment which one of them works best.  
++ You can easily <span style="color:#FFA07A">switch between branches</span>, compare them against each other, revise changes, etc.  
++ Many contributors may work with the code in a <span style="color:#FFA07A">paralell</span>.
++ Each branch can have <span style="color:#FFA07A">multiple commits</span>.
++ You can have <span style="color:#FFA07A">multiple branches</span> and you can create a branch from any of the previous branches.
 
 </div>
 ```{r, echo=FALSE, out.width = '30%'}
 knitr::include_graphics(here::here("img", "git_branch_03.png"))
 ```
 
-# Create new branch {data-background=#4B0082}
+# Create a new branch {data-background=#4B0082}
 
 ## New branch via GitHub.com
 
-You can create new branch via GitHub.com web:
-
-```{r, echo=FALSE, out.width = '30%'}
-knitr::include_graphics(here::here("img", "git_branch_03.png"))
-```
-
-Name convention for branches is similar to repo one (e.g. `this-is-my-new-branch`)
-
+You can create a new branch via GitHub.com web:
 
 ```{r, echo=FALSE, out.width = '30%'}
 knitr::include_graphics(here::here("img", "git_branch_04.png"))
 ```
+
+Name convention for branches is similar to the repo one (e.g. `this-is-my-new-branch`)
+
 
 ```{r, echo=FALSE, out.width = '30%'}
 knitr::include_graphics(here::here("img", "git_branch_05.png"))
@@ -860,7 +856,8 @@ knitr::include_graphics(here::here("img", "git_branch_05.png"))
 
 ## New branch from GitHub.com to RStudio
 
-Once you create a new branch, it appears in your local repo once you **pull** the remote one.
+Once you've created a new branch, it appears in your local repo,  
+just **pull** the remote one.
 
 ```{r, echo=FALSE, out.width = '30%'}
 knitr::include_graphics(here::here("img", "git_branch_06.png"))
@@ -877,7 +874,7 @@ Any further commit will be added to this new branch, while `master` will be unto
 
 You can create a new branch directly from RStudio:
 
-```{r, echo=FALSE, out.width = '25%'}
+```{r, echo=FALSE, out.width = '40%'}
 knitr::include_graphics(here::here("img", "git_branch_07.png"))
 ```
 ```{r, echo=FALSE, out.width = '50%'}
@@ -899,7 +896,7 @@ knitr::include_graphics(here::here("img", "git_branch_08.png"))
 ## Now it is your turn!<br>Create a new branch and add a new commit {data-background=#008080}
 
 <div style="text-align:left"> 
-+ Create new branch  
++ Create a new branch  
 + Add some text to README.md (whatever you wish)  
 + Replace lines 17-18 in `example_code.R` with lines 31-33 from `exercice_description.R`  
 + Stage both files and commit  
@@ -917,7 +914,7 @@ knitr::include_graphics(here::here("img", "git_branch_10.png"))
 
 ## Merge
 
-Once you are ready to incorporate the changes you can <span style="color:#FFA07A">**merge**</span> them into your master branch.
+Once you are ready to incorporate the changes, you can <span style="color:#FFA07A">**merge**</span> them into your master branch.
 
 ```{r, echo=FALSE, out.width = '50%'}
 knitr::include_graphics(here::here("img", "git_branch_02.png"))
@@ -935,6 +932,7 @@ To do so you can either:
 <small>(e.g. `https://github.com/stmarcin/github-workshop/compare`) </small>  
 
 or  
+
 + Click on `Compare & pull request` and scroll down. 
 </div> 
 
@@ -973,7 +971,7 @@ knitr::include_graphics(here::here("img", "git_branch_14.png"))
 
 ## Delete unnecessary branch
 
-Once you **confirm** merge you can delete an old branch.
+Once you **confirm** merge, you can delete an old branch.
 
 ```{r, echo=FALSE, out.width = '80%'}
 knitr::include_graphics(here::here("img", "git_branch_15.png"))
@@ -997,7 +995,7 @@ Fast-forward
 
 ## Delete branch in RStudio
 
-The branch is deleted from the remote repository but it is still visible in RStudio pop-up menu:
+The branch is deleted from the remote repository, but it is still visible in RStudio pop-up menu:
 
 ```{r, echo=FALSE, out.width = '20%'}
 knitr::include_graphics(here::here("img", "git_branch_16.png"))
@@ -1006,7 +1004,7 @@ knitr::include_graphics(here::here("img", "git_branch_16.png"))
 ## Delete branch in RStudio
 
 <div style="text-align:left"> 
-In order to remove it you need:
+In order to remove it you need to:
 
 + go to **(S)hell**  
 </div>
@@ -1045,18 +1043,18 @@ git branch -d name-of-your-branch
 + Check out to `master`  
 + *Optional: delete your local branch (and remove it from RStudio pop-up menu)*
 
-# Annex I {data-background=#8B008B}
+# Annex I: Fork {data-background=#8B008B}
 
-# Basic vocabulary:<br>Fork repository {data-background=#4B0082}
+# Basic vocabulary:<br>Fork a repository {data-background=#4B0082}
 
 ## Fork
 
 <div style="text-align:left"> 
-<span style="color:#FFA07A">**Fork**</span> repository makes a personal `copy` of another user's repository.  
+<span style="color:#FFA07A">**Fork**</span> a repository makes a personal `copy` of another user's repository.  
 
 All commits you made are **pushed** to your copy of the original repository without afecting an original one.
 
-You can establish a link to an original repo, keep your fork synchronized and make a pull request to an **upstream** repo.
+You can establish a link to an original repo, keep your fork synchronized and make a pull request to an <span style="color:#FFA07A">**upstream**</span> repo.
 
 </div>
 
@@ -1066,7 +1064,7 @@ knitr::include_graphics(here::here("img", "git_fork_01.png"))
 
 ## Workflow with forked repository
 
-1. Once you fork repository you need to clone it to the local repo. 
+1. Once you fork a repository you need to clone it to the local repo. 
 1. Once it is cloned you have to set a link to the original one.  
 1. Open Shell and write the following:
 
@@ -1093,7 +1091,7 @@ knitr::include_graphics(here::here("img", "github_issues.png"))
 GitHub <span style="color:#FFA07A">**issues**</span> serve to communicate with users (including yourself).
 
 + Each **`issue`** has its own id which can be then refered to and contains its own discussion thread.
-+ You can refer the issue id (`#`) in your commit messages, e.g. `Solve #3`
++ You can refer to the issue id (<span style="color:#FFA07A">`#`</span>) in your commit messages, e.g. `Solve #3`
 + You can <span style="color:#FFA07A">`@mention`</span> another user so they are informed about the issue.  
 
 # Now it is your turn!<br>Fork a repository {data-background=#008080}
@@ -1107,26 +1105,166 @@ GitHub <span style="color:#FFA07A">**issues**</span> serve to communicate with u
 + In your pull request refer to your issue
 
 
+# Annex II: GitHub desktop {data-background=#8B008B}
+
+# GitHub destkop {data-background=#4B0082}
+
+## Set up GitHub Desktop
+
+
+```{r, echo=FALSE, out.width = '50%'}
+knitr::include_graphics(here::here("img", "github_desktop_01.png"))
+```
+
+```{r, echo=FALSE, out.width = '50%'}
+knitr::include_graphics(here::here("img", "github_desktop_02.png"))
+```
+
+## Create a new repository
+
+Go to File -> New repository (or `Ctrl + N`)
+
+```{r, echo=FALSE, out.width = '50%'}
+knitr::include_graphics(here::here("img", "github_desktop_03.png"))
+```
+
+## Create a remote repository
+
+```{r, echo=FALSE, out.width = '50%'}
+knitr::include_graphics(here::here("img", "github_desktop_04.png"))
+```
+```{r, echo=FALSE, out.width = '45%'}
+knitr::include_graphics(here::here("img", "github_desktop_05.png"))
+```
+
+For the sake of your mental health:  
+**use the same name for both, local and remote repository**!
+
+## Add a file to your local repository 
+
+You can just simply copy a file to your repo's folder:
+
+```{r, echo=FALSE, out.width = '45%'}
+knitr::include_graphics(here::here("img", "github_desktop_06.png"))
+```
+
+GitHub desktop offers default commit messages  
+(such sophisticated as: *Create file.txt* or *Update file.txt*)
+
+## Commit and push changes
+
+Once you commit you'll see, that your changes are not **pushed** to your remote repo (**1**).
+
+```{r, echo=FALSE, out.width = '45%'}
+knitr::include_graphics(here::here("img", "github_desktop_07.png"))
+```
+
+You need to **push** commits manually (**2**)
+
+## Create a new branch
+
+In order to create a new branch go to:  
+`Branch` -> `New Branch` (or `Ctrl + Shift + N`):
+
+```{r, echo=FALSE, out.width = '30%'}
+knitr::include_graphics(here::here("img", "github_desktop_08.png"))
+```
+```{r, echo=FALSE, out.width = '40%'}
+knitr::include_graphics(here::here("img", "github_desktop_09.png"))
+```
+
+Once you have created a new branch, confirm which branch you are currently on:  
+
+```{r, echo=FALSE, out.width = '75%'}
+knitr::include_graphics(here::here("img", "github_desktop_10.png"))
+```
+
+## Update a branch  
+
+I have accidentally commit to `master` branch instead of the `my-first-new-branch`.  
+
+```{r, echo=FALSE, out.width = '50%'}
+knitr::include_graphics(here::here("img", "github_desktop_11.png"))
+```
+
+GitHub Desktop allows you to **Update** your new branch **from master**.
+
+```{r, echo=FALSE, out.width = '15%'}
+knitr::include_graphics(here::here("img", "github_desktop_12.png"))
+```
+
+## Create a new issue from GitHub Desktop  
+
+Go to `Repository` -> `Create issue on GitHub` (or `Ctrl + i`)
+
+```{r, echo=FALSE, out.width = '15%'}
+knitr::include_graphics(here::here("img", "github_desktop_13.png"))
+```
+
+You can directly refer to the issue writing a commit message:
+
+```{r, echo=FALSE, out.width = '30%'}
+knitr::include_graphics(here::here("img", "github_desktop_18.png"))
+```
+
+
+## Ignore file(s), dicard (recent) changes  
+
+Select a file in **`Changes`** pane so you can: 
+
+```{r, echo=FALSE, out.width = '25%'}
+knitr::include_graphics(here::here("img", "github_desktop_14.png"))
+```
+
++ add a file to .gitignore  
++ edit a file (open in... e.g. Notepad++)  
++ discard recent changes:  
+
+```{r, echo=FALSE, out.width = '25%'}
+knitr::include_graphics(here::here("img", "github_desktop_15.png"))
+```
+
+## Merge branch from GitHub Desktop  
+
+You need to **check out** to the branch you want to merge (e.g. `master`)
+
+```{r, echo=FALSE, out.width = '20%'}
+knitr::include_graphics(here::here("img", "github_desktop_16.png"))
+```
+
+When it's done, you can delete a branch:
+
+```{r, echo=FALSE, out.width = '35%'}
+knitr::include_graphics(here::here("img", "github_desktop_17.png"))
+```
+
+# Now it is your turn!<br>Work with GitHub Desktop {data-background=#008080}
+
++ Create a new public repository using GitHub desktop
++ Publish it
++ Create an `issue`
++ Create `my-new-branch` and check out to it
++ Modify a file and commit changes refering to an issue
++ Merge `my-new-branch` to master and delete it.
 
 
 
+# Annex III: new repo {data-background=#8B008B}
 
-# Annex II: new repo {data-background=#8B008B}
+# Create a new repo {data-background=#4B0082}
 
-# Create new repo {data-background=#4B0082}
-
-## Create repo for an existing project
+## Create a repo for an existing project
 
 Do you already have R project and need to create GitHub repo for it?  
 **No problem!**
 
 <br> 
 
-<p align = left>The easiest way to do that (no configuration needed):</p>
+<p align = left>The easiest way to do it (no configuration needed):</p>
 
 1. Create a new repo on `GitHub` (remember to include `.gitignore`);  
 1. Clone the repo to you desktop
-1. Copy your project to the one you created when cloning your repo.
+1. Copy your project to the one you created while cloning your repo.
 1. Commit the files of your choice (adding unnecessary to `.gitignore`)
 
 <br> 
@@ -1143,7 +1281,7 @@ Done!
   install.packages("usethis")
   ```
 
-2. Create local repository
+2. Create s local repository
   ```
   usethis::use_git()
   ```
@@ -1158,7 +1296,7 @@ Done!
 
 <br>
 
-Note 1: use use_github() help to check its parameters (`?usethis::use_github()`).  
+Note 1: use `use_github()` help to check its parameters ( `?usethis::use_github()` ).  
 
 Note 2: in case of problems, check relevant chapter of [Happy Git and GitHub for the useR](https://happygitwithr.com/existing-github-last.html)
 
@@ -1168,11 +1306,11 @@ Note 2: in case of problems, check relevant chapter of [Happy Git and GitHub for
 
 
 
-# Annex III: .gitignore {data-background=#8B008B}
+# Annex IV: .gitignore {data-background=#8B008B}
 
 # How to create  **.gitignore**? {data-background=#4B0082}
 
-## On GitHub when creating repository
+## On GitHub while creating repository
 
 <br>
 
@@ -1230,5 +1368,7 @@ usethis::edit_git_ignore()
 
 </div>
 
+# Thank you!
 
+![](https://thumbs.gfycat.com/GlamorousComplexCrane-small.gif)
 

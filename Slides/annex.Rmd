@@ -14,13 +14,142 @@ output:
 
 # Annex {data-background=#8B008B}
 
-# How to create  **.gitignore**? {data-background=#4B0082}
+# GitHub destkop {data-background=#4B0082}
 
-## On GitHub when creating repository
-
-
+## Set up GitHub Desktop
 
 
+```{r, echo=FALSE, out.width = '50%'}
+knitr::include_graphics(here::here("img", "github_desktop_01.png"))
+```
+
+```{r, echo=FALSE, out.width = '50%'}
+knitr::include_graphics(here::here("img", "github_desktop_02.png"))
+```
+
+## Create new repository
+
+Go to File -> New repository (or `Ctrl + N`)
+
+```{r, echo=FALSE, out.width = '50%'}
+knitr::include_graphics(here::here("img", "github_desktop_03.png"))
+```
+
+## Create remote repository
+
+```{r, echo=FALSE, out.width = '50%'}
+knitr::include_graphics(here::here("img", "github_desktop_04.png"))
+```
+```{r, echo=FALSE, out.width = '45%'}
+knitr::include_graphics(here::here("img", "github_desktop_05.png"))
+```
+
+For the sake of your mental health:  
+**use the same name for both, local and remote repository**!
+
+## Add a file to your local repository 
+
+You can just simply copy a file to your repo's folder:
+
+```{r, echo=FALSE, out.width = '45%'}
+knitr::include_graphics(here::here("img", "github_desktop_06.png"))
+```
+
+GitHub desktop offers default commit messages  
+(such sophisticated as: *Create file.txt* or *Update file.txt*)
+
+## Commit and push changes
+
+Once you commit you'll see, that your changes are not **pushed** to your remote repo (**1**).
+
+```{r, echo=FALSE, out.width = '45%'}
+knitr::include_graphics(here::here("img", "github_desktop_07.png"))
+```
+
+You need to **push** commits manually (**2**)
+
+## Create new branch
+
+In order to create a new branch go to:  
+`Branch` -> `New Branch` (or `Ctrl + Shift + N`):
+
+```{r, echo=FALSE, out.width = '30%'}
+knitr::include_graphics(here::here("img", "github_desktop_08.png"))
+```
+```{r, echo=FALSE, out.width = '40%'}
+knitr::include_graphics(here::here("img", "github_desktop_09.png"))
+```
+
+Once you created new branch, confirm which branch you are currently on:  
+
+```{r, echo=FALSE, out.width = '75%'}
+knitr::include_graphics(here::here("img", "github_desktop_10.png"))
+```
+
+## Update remote branch  
+
+I have accidentally commit to `master` branch instead of the `my-first-new-branch`.  
+
+```{r, echo=FALSE, out.width = '50%'}
+knitr::include_graphics(here::here("img", "github_desktop_11.png"))
+```
+
+GitHub Desktop allows you to **Update** your new branch **from master**.
+
+```{r, echo=FALSE, out.width = '15%'}
+knitr::include_graphics(here::here("img", "github_desktop_12.png"))
+```
+
+## Create new issue from GitHub Desktop  
+
+Go to `Repository` -> `Create issue on GitHub` (or `Ctrl + i`)
+
+```{r, echo=FALSE, out.width = '15%'}
+knitr::include_graphics(here::here("img", "github_desktop_13.png"))
+```
+
+You can directly refer to the issue when writing a commit message:
+
+```{r, echo=FALSE, out.width = '30%'}
+knitr::include_graphics(here::here("img", "github_desktop_18.png"))
+```
 
 
-# exercises {data-background=#008080}
+## Ignore file(s), dicard (recent) changes  
+
+Select file in **`Changes`** pane so you can: 
+
+```{r, echo=FALSE, out.width = '25%'}
+knitr::include_graphics(here::here("img", "github_desktop_14.png"))
+```
+
++ add the file to .gitignore  
++ edit file (open in... e.g. Notepad++)  
++ discard recent changes:  
+
+```{r, echo=FALSE, out.width = '25%'}
+knitr::include_graphics(here::here("img", "github_desktop_15.png"))
+```
+
+## Merge branch from GitHub Desktop  
+
+You need to **check out** to the branch we want to merge (e.g. `master`)
+
+```{r, echo=FALSE, out.width = '20%'}
+knitr::include_graphics(here::here("img", "github_desktop_16.png"))
+```
+
+Once you are done, you can delete a branch:
+
+```{r, echo=FALSE, out.width = '35%'}
+knitr::include_graphics(here::here("img", "github_desktop_17.png"))
+```
+
+# Now it is your turn!<br>Work with GitHub Desktop {data-background=#008080}
+
++ Create new public repository using GitHub desktop
++ Publish it
++ Create an `issue`
++ Create `my-new-branch` and check out to it
++ Modify a file and commit changes refering to an issue
++ Merge `my-new-branch` to master and delete it.
