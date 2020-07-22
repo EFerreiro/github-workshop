@@ -1,0 +1,5 @@
+This is my text file prepared for the workshop.
+#
+It's going to serve as an example of the application of the GitHub Desktop and will be modified.
+#
+

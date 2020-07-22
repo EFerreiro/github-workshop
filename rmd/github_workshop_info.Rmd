@@ -201,6 +201,23 @@ Some basic information, rules and guidelines:
 
 <br> 
 
+## **Workshop materials**
+
+### **Files for excercices**
+
+In the email you find two `.R` files file with a very simple R code and one `.txt` - please make them available for you during the workshop.
+
+### **Presentation**
+
+The **presentation** (as html file) you can download from the workshop repository. To do so, you can go to [https://github.com/stmarcin/github-workshop/blob/master/Slides/slides.html](https://github.com/stmarcin/github-workshop/blob/master/Slides/slides.html), **right-click on download**: 
+
+```{r workshop presentation, echo=FALSE, out.width = '80%'}
+knitr::include_graphics("https://github.com/stmarcin/github-workshop/raw/master/img/workshop_get_doc_01.png")
+```
+
+and select **Save link as** and download the file. Then, you can open the `slides.html` file using your web-browser. 
+
+Use your keyboard arrows to navigate through the presentation (available options are visible in the bottom-right corner). Presentation is organized in *chapters* as subsequent columns. 
 
 <br> 
 ```{r echo=FALSE, eval = FALSE}
