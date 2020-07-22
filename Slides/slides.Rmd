@@ -372,30 +372,6 @@ Use **.gitignore** for all those files that <span style="color:#FFA07A">should n
 
 They only reside on your local machine.
 
-## Types of <span style="color:#FFA07A">**.gitignore**</span>
-
-<div style="text-align:left"> 
-
-<br>
-
-+ <span style="background-color:rgba(255,244,204,.1)">**repository**</span>  <span style="color:#FFA07A">.gitignore</span>  
-  
-  + Located in the root folder of the repository
-  + Created together with the repository by GitHub
-
-<br>
-
-+ **local**  <span style="color:#FFA07A">.gitignore</span>  
-
-  + Located in a given folder
-  + refers to files of a given folder
-
-<br>
-
-+ **global** <span style="color:#FFA07A">.gitignore</span> for every Git repository on your computer  
-
-</div>
-
 ## What to add to  **.gitignore**?
 
 Anything we don't want or don't need to keep track of 
@@ -440,7 +416,11 @@ Anything we don't want or don't need to keep track of
   + all files of the `.Rproj` type  
   + all files in the (future) `temporary` folder  
 
-+ revise list of files in your git pane
++ save `.gitignore`  
+
++ revise list of files in your git pane  
+
++ copy lines added to `.gitignore` and send me through chat (directly to me!)
 
 </div>
 
@@ -1307,6 +1287,31 @@ Note 2: in case of problems, check relevant chapter of [Happy Git and GitHub for
 
 
 # Annex IV: .gitignore {data-background=#8B008B}
+
+# Types of <span style="color:#FFA07A">**.gitignore**</span>  {data-background=#4B0082}
+
+<div style="text-align:left"> 
+
+<br>
+
++ <span style="background-color:rgba(255,244,204,.1)">**repository**</span>  <span style="color:#FFA07A">.gitignore</span>  
+  
+  + Located in the root folder of the repository
+  + Created together with the repository by GitHub
+
+<br>
+
++ **local**  <span style="color:#FFA07A">.gitignore</span>  
+
+  + Located in a given folder
+  + refers to files of a given folder
+
+<br>
+
++ **global** <span style="color:#FFA07A">.gitignore</span> for every Git repository on your computer  
+
+</div>
+
 
 # How to create  **.gitignore**? {data-background=#4B0082}
 

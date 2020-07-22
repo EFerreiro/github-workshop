@@ -41,5 +41,6 @@ vignettes/*.pdf
 # my files
 *.Rproj
 *.html
+!Slides.html
 rmd/temp
 img/temp
