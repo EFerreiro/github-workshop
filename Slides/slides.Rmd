@@ -125,6 +125,11 @@ e.g. https://github.com/r-spatial/leafgl
     + easy to link to commits, cross-connect to other issues, bug tracker  
     + assignees, mentions and notifications  
 
+## Is git good for everything?
+
+```{r final_final, echo=FALSE, out.width = '40%'}
+knitr::include_graphics("https://github.com/stmarcin/github-workshop/raw/master/img/final_final.png")
+```
 
 # Basic vocabulary: repository {data-background=#4B0082}
 
